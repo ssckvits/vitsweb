@@ -1,0 +1,78 @@
+*{
+    scroll-behavior: smooth;
+    transition: 0.2s;
+}
+
+.gallery{
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vh 0;
+}
+
+.gallery .gridDisplay{
+    display: grid;
+    grid-template-columns: repeat(3, 25vw);
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.competition{
+    height: max-content;
+    max-width: 100vw;
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+.competition h1{
+    font-size: 8vh;
+    width: auto;
+    line-height: 8vh;
+}
+
+.competition h2{
+    width: max-content;
+    font-size: 1.5vh;
+}
+
+.about{
+    margin: 25px;
+    width: 60vw;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 2vh;
+    border: 1px solid gold;
+    color: gold;
+    text-shadow: rgba(255, 217, 0, 0.425) 0 0 9px;
+    cursor:default;
+}
+
+#competitions{
+    height: max-content;
+    padding: 10vh 0;
+}
+
+#competitions .gridDisplay .gridItem{
+    text-align: center;
+}
+
+#competitions button{
+    margin: 0px;
+}
+
+@media screen and (max-width: 768px){
+    .about{
+        width: 90vw !important;
+    }
+}
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    .gridDisplay{
+        grid-template-columns: repeat(2, 350px);
+    }
+}
+
