@@ -1,0 +1,42 @@
+.gallery{
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 20vh;
+}
+
+.gallery h1{
+    line-height: normal;
+}
+
+.gallery h2{
+    margin-top: 5vh;
+    font-size: 3vh;
+    font-style: italic;
+    border: 1px solid white;
+    padding: 15px 25px;
+    border-radius: 50px;
+}
+
+.rules{
+    margin-top: 5vh;
+    background-color: #0c0c0c;
+    border-radius: 25px;
+    padding: 25px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules p{
+    font-weight: 600;
+    font-size: 2vh;
+}
+
+.rules ul{
+    max-width: 90vw;
+}
+
+.rules li{
+    margin-top: 15px;
+}
