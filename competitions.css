@@ -1,0 +1,171 @@
+.gallery{
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 20vh;
+}
+
+.gallery h1{
+    line-height: normal;
+}
+
+.gallery h2{
+    margin-top: 5vh;
+    font-size: 3vh;
+    font-style: italic;
+    border: 1px solid white;
+    padding: 15px 25px;
+    border-radius: 50px;
+}
+
+.rules{
+    margin-top: 5vh;
+    background-color: #0c0c0c;
+    border-radius: 25px;
+    padding: 25px 5px;
+    display: flex;
+    width: 65vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules p{
+    font-weight: 600;
+    font-size: 2vh;
+}
+
+.rules ul{
+    max-width: 90vw;
+}
+
+.rules li{
+    margin-top: 15px;
+}
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 0;
+}
+
+.registration form {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input {
+    width: 50vw;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    font-size: 16px;
+    color: #aaa;
+    padding: 0px 5px;
+    margin-left: 15px;
+    border-radius: 25px;
+    background-color: rgb(19, 19, 19);
+    pointer-events: none;
+    transition: 0.3s ease;
+    transform: translateY(-50%);
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: -1px;
+    left: 12px;
+    color: #fff;
+}
+
+.registration button {
+    margin-top: 1rem;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.popup-card {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+    transition: 0.4s;
+}
+
+.popup-content {
+    background-color: #141414;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.whatsapp-link {
+    display: block;
+    margin: 10px 0;
+    color: #25D366;
+    text-decoration: none;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}
+
+.button.rounded {
+    border-radius: 25px;
+}
+
+.whatsapp{
+    border-color: #25D366;
+    color: #25D366;
+}
+
+.whatsapp:hover{
+    background-color: #25D366;
+    color: black;
+}
+@media (max-width: 768px){
+    .form-group input {
+        width: 100%;
+    }
+    .rules{
+        width: 95vw;
+    }
+}

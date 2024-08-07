@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="competitions.css">
+    <script src="https://kit.fontawesome.com/28838d7a86.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+    <script defer src="competitions.js"></script>
+</head>
+<body>
+    <div class="responsiveNav">
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="achievements.html"><li>Achievements</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCrV8KVaavJexzcOhiy8JcWuw2xK-QBK8FMWWRzBaI6jHEAw/viewform?usp=sf_link"><li>Join</li></a>
+        </ul>
+    </div>
+    <nav>
+        <img src="img/logo.png">
+        <div class="navButtons">
+            <a href="index.html"><button class="button">Home</button></a>
+            <a href="projects.html"><button class="button">Projects</button></a>
+            <a href="achievements.html"><button class="button">Achievements</button></a>
+            <a href="about.html"><button class="button">About</button></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCrV8KVaavJexzcOhiy8JcWuw2xK-QBK8FMWWRzBaI6jHEAw/viewform?usp=sf_link"><button class="button specialButton">Join</button></a>
+        </div>
+        <img src="img/vitslogo.png">
+        <i class="fa-solid fa-bars expandMenu"></i>
+    </nav>
+    <div class="wrapper">
+    <div class="section gallery">
+        <h1>Nexnova '24</h1>
+        <h2>Web Development</h2>
+        <div class="rules">
+            <ul>
+                <li>Build a website centered around a fictional networking and telecommunication company (ex: Dialog).</li>
+                <li>Categories:
+                    <ul>
+                        <li>Grade 6 - 9</li>
+                        <li>Grade 10 - 13</li>
+                        <li>Each school can submit up to 2 entries per category, totaling 4 submissions.</li>
+                    </ul>    
+            </ul>
+        </div>
+        <div class="rules">
+            <p>Instructions</p>
+            <ul>
+                <li>Pages Required(Additional Pages are allowed):
+                    <ul>
+                        <li>Home: Introduction to the company, including a brief overview of services.</li>
+                        <li>Plans: Detailed descriptions of various service plans and pricing.</li>
+                        <li>Customer Support: Contact form, FAQs, or support options for customers.</li>
+                    </ul>
+                </li>
+                <li>This is an individual event. Each school is allowed two submissions per age category.</li>
+                <li>Your website will be judged based on the following criteria:
+                    <ul>
+                        <li>Design & Creativity</li>
+                        <li>Functionality & User Experience</li>
+                        <li>Technical Skills</li>
+                    </ul>
+                </li></ul>
+        </div>
+        <div class="rules">
+            <p>Rules</p>
+            <ul>
+                <li>All code must be hand-coded using HTML, CSS, and JavaScript.</li>
+                <li>The use of content management systems (CMS) or pre-designed templates is strictly prohibited. All code must be original.</li>
+                <li>The website must be responsive and functional on both desktop and mobile devices.</li>
+                <li>The website should be compatible with the latest versions of major browsers (e.g., Chrome, Firefox, Safari, Edge).</li>
+            </ul>
+        </div>
+        <a href="https://chat.whatsapp.com/LU9gCt977mE1WN54K0qA9o" target="_blank"><button class="button specialButton rounded whatsapp"><i class="fa-brands fa-whatsapp"></i> Join the WhatsApp group.</button></a>
+        <div class="registration">
+            <h1>Registration.</h1>
+            <form method="post" action="https://script.google.com/macros/s/AKfycbwr4Z7f_YXXb6juUp-1jDiSzpG0N3eptswXTzT9zQQ0a-d7SBXQS9HqscifxsY67t4/exec" name="contact-form">
+                <div class="form-group">
+                    <input type="text" id="school-name" required placeholder=" " autocomplete="off" name="School">
+                    <label for="school-name">School Name:</label>
+                </div>
+    
+                <div class="form-group">
+                    <input type="text" id="team-leader-name"required placeholder=" " autocomplete="off" name="Name">
+                    <label for="team-leader-name">Full Name:</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="team-leader-phone"required placeholder=" " autocomplete="off" name="Phone No">
+                    <label for="team-leader-phone">Phone Number:</label>
+                </div>
+    
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder=" " autocomplete="off" name="Email">
+                    <label for="email">Email Address:</label>
+                </div>
+                
+                <input type="submit" class="button specialButton rounded" id="submit" value="Submit">
+            </form>  
+        </div>
+    </div>
+    <div class="section footer">
+        <ul>
+            <li>Terms Of Service</li>
+            <a href="https://stsylvesterscollege.lk/u/index"><li>School Website</li></a>
+            <li>Resources</li>
+            <a onclick="window.location.href='about.html#contact'"><li>Contact</li></a>
+        </ul>
+        <p>&copy; 2024 St.Sylvester's College ICT Society</p>
+    </div>
+</div>
+<div id="popup-card" class="popup-card">
+    <div class="popup-content">
+        <h1>Thank you for registering !</h1>
+        <p>Please click the link below to join the WhatsApp group for updates:</p>
+        <a href="https://chat.whatsapp.com/YOURGROUPLINK" target="_blank" class="whatsapp-link">Join WhatsApp Group</a>
+        <label>
+            <input type="checkbox" id="acknowledge" required> I acknowledge that I have read the rules & joined the WhatsApp group.
+        </label>
+        <button id="close-popup" class="button specialButton rounded">Close</button>
+    </div>
+</div>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwr4Z7f_YXXb6juUp-1jDiSzpG0N3eptswXTzT9zQQ0a-d7SBXQS9HqscifxsY67t4/exec'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+</script>
+</body>
+</html>

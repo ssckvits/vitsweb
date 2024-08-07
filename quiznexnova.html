@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="competitions.css">
+    <script src="https://kit.fontawesome.com/28838d7a86.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+    <script defer src="competitions.js"></script>
+</head>
+<body>
+    <div class="responsiveNav">
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+            <a href="achievements.html"><li>Achievements</li></a>
+            <a href="about.html"><li>About</li></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCrV8KVaavJexzcOhiy8JcWuw2xK-QBK8FMWWRzBaI6jHEAw/viewform?usp=sf_link"><li>Join</li></a>
+        </ul>
+    </div>
+    <nav>
+        <img src="img/logo.png">
+        <div class="navButtons">
+            <a href="index.html"><button class="button">Home</button></a>
+            <a href="projects.html"><button class="button">Projects</button></a>
+            <a href="achievements.html"><button class="button">Achievements</button></a>
+            <a href="about.html"><button class="button">About</button></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCrV8KVaavJexzcOhiy8JcWuw2xK-QBK8FMWWRzBaI6jHEAw/viewform?usp=sf_link"><button class="button specialButton">Join</button></a>
+        </div>
+        <img src="img/vitslogo.png">
+        <i class="fa-solid fa-bars expandMenu"></i>
+    </nav>
+    <div class="wrapper">
+    <div class="section gallery">
+        <h1>Nexnova '24</h1>
+        <h2>Quiz Competition</h2>
+        <div class="rules">
+            <p>Instructions:</p>
+            <ul>
+                <li>Eligibility: Students in Grades 10 to 13.</li>
+                <li>4 members are allowed per team (Including the Captain).</li>
+                <li>No changes are allowed after registration.</li>
+                <li>Requirements: Stable internet and compatible devices for online rounds.</li>
+                <li>Quiz Format: Multiple-choice. Details on questions and scoring will be in the WhatsApp group.</li>
+                <li>Schedule: Dates and times via WhatsApp. Teams must be available for all rounds.</li>
+                <li>No external help or collaboration. Cheating means disqualification.</li>
+                <li>Top teams from online rounds move to the finals at Nexnova '24.</li>
+            </ul>
+        </div>
+        <a href="https://chat.whatsapp.com/Kb4GkIP3IvHHjNbloJOc6d" target="_blank"><button class="button specialButton rounded whatsapp"><i class="fa-brands fa-whatsapp"></i> Join the WhatsApp group.</button></a>
+        <div class="registration">
+            <h1>Registration.</h1>
+            <form method="post" action="https://script.google.com/macros/s/AKfycbxjlxBFfJeYDvfeFEVWR69Fagm4wqnJuyhl0AmMBZuwPJhc3oo-5RG3ORn8WSe4iweY/exec" name="contact-form">
+                <div class="form-group">
+                    <input type="text" id="school-name" required placeholder=" " autocomplete="off" name="School">
+                    <label for="school-name">School Name:</label>
+                </div>
+    
+                <div class="form-group">
+                    <input type="text" id="team-leader-name"required placeholder=" " autocomplete="off" name="Team Leader">
+                    <label for="team-leader-name">Team Leader:</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="member1-name"required placeholder=" " autocomplete="off" name="Member 1">
+                    <label for="team-leader-name">Member 1:</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="member2-name"required placeholder=" " autocomplete="off" name="Member 2">
+                    <label for="team-leader-name">Member 2:</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="member3-name"required placeholder=" " autocomplete="off" name="Member 3">
+                    <label for="team-leader-name">Member 3:</label>
+                </div>
+    
+                <div class="form-group">
+                    <input type="tel" id="team-leader-phone"required placeholder=" " autocomplete="off" name="Phone No">
+                    <label for="team-leader-phone">Phone Number:</label>
+                </div>
+    
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder=" " autocomplete="off" name="Email">
+                    <label for="email">Email Address:</label>
+                </div>
+                
+                <input type="submit" class="button specialButton rounded" id="submit" value="Submit">
+            </form>  
+        </div>
+    </div>
+    <div class="section footer">
+        <ul>
+            <li>Terms Of Service</li>
+            <a href="https://stsylvesterscollege.lk/u/index"><li>School Website</li></a>
+            <li>Resources</li>
+            <a onclick="window.location.href='about.html#contact'"><li>Contact</li></a>
+        </ul>
+        <p>&copy; 2024 St.Sylvester's College ICT Society</p>
+    </div>
+</div>
+<div id="popup-card" class="popup-card">
+    <div class="popup-content">
+        <h1>Thank you for registering !</h1>
+        <p>Please click the link below to join the WhatsApp group for updates:</p>
+        <a href="https://chat.whatsapp.com/YOURGROUPLINK" target="_blank" class="whatsapp-link">Join WhatsApp Group</a>
+        <label>
+            <input type="checkbox" id="acknowledge" required> I acknowledge that I have read the rules & joined the WhatsApp group.
+        </label>
+        <button id="close-popup" class="button specialButton rounded">Close</button>
+    </div>
+</div>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxjlxBFfJeYDvfeFEVWR69Fagm4wqnJuyhl0AmMBZuwPJhc3oo-5RG3ORn8WSe4iweY/exec '
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! your form is submitted successfully." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+</script>
+</body>
+</html>
