@@ -53,6 +53,9 @@ a{
     border-radius: 25px;
 }
 
+.halfround{
+    border-radius: 5px;
+}
 
 nav{
     height: 8vh;
