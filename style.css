@@ -12,6 +12,10 @@ body, html{
     overflow-x: hidden;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 h1, h2, h3, h4, p, a{
     margin: 0px;
     padding: 0px;
