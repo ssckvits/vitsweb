@@ -122,29 +122,57 @@
         <p>&copy; 2024 St.Sylvester's College ICT Society</p>
     </div>
 </div>
+<div id="loadingIndicator">
+    <div class="dialogBox">
+        <img src="img/loading.gif" alt="Loading...">
+    </div>
+</div>
 <div id="popup-card" class="popup-card">
+    <div class="dialogBox">
     <div class="popup-content">
         <h1>Thank you for registering !</h1>
-        <p>Please click the link below to join the WhatsApp group for updates:</p>
-        <a href="https://chat.whatsapp.com/YOURGROUPLINK" target="_blank" class="whatsapp-link">Join WhatsApp Group</a>
-        <label>
-            <input type="checkbox" id="acknowledge" required> I acknowledge that I have read the rules & joined the WhatsApp group.
-        </label>
+        <p>Please join the WhatsApp group for Updates.</p>
+        <a href="https://chat.whatsapp.com/YOURGROUPLINK" target="_blank" class="whatsapp-link"><button class="button specialButton rounded whatsapp"><i class="fa-brands fa-whatsapp"></i> Join the WhatsApp Group</button></a>
         <button id="close-popup" class="button specialButton rounded">Close</button>
+    </div>
     </div>
 </div>
 <script>
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxzfz20LQWtbjl1AyCzoRmqAG5N3jHxqSiNWmzMVa-0EVnVnf8KSPFSYMR_1KwXMQeU/exec'
-
 const form = document.forms['contact-form']
+const loadingIndicator = document.getElementById('loadingIndicator');
+const popupCard = document.getElementById('popup-card');
+const closePopupButton = document.getElementById('close-popup');
 
 form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => alert("Thank you! your form is submitted successfully." ))
-  .then(() => { window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
-})
+    e.preventDefault();
+
+    // show indicator
+    loadingIndicator.style.display = 'block';
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        // hide indicator
+        loadingIndicator.style.display = 'none';
+
+        // show card dialog
+        popupCard.style.display = 'block';
+
+        // clear form
+        form.reset();
+    })
+    .catch(error => {
+        // hide loading indicator
+        loadingIndicator.style.display = 'none';
+        
+        console.error('Error!', error.message);
+    });
+});
+
+// close popup
+closePopupButton.addEventListener('click', () => {
+    popupCard.style.display = 'none';
+});
 </script>
 </body>
 </html>
