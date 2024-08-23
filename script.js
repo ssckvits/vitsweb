@@ -39,6 +39,6 @@ function submitMessage() {
 }
 
 function nexnovaSoon(){
-  alert("Registrations haven't opened yet, please try again later.");
+  alert("Sorry, Registrations are Closed. See You Next Time!");
 }
 
