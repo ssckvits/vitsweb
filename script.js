@@ -42,3 +42,7 @@ function nexnovaSoon(){
   alert("Sorry, Registrations are Closed. See You Next Time!");
 }
 
+window.addEventListener('load', function () {
+      const loader = document.querySelector('.loading');
+      loader.classList.add('hidden');
+});
