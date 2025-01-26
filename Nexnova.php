@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png" type="img/svg">
+
+  <title>NEXNOVA '24</title>
+
+  <link rel="stylesheet" type="text/css" href="Nexnova-main.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/28838d7a86.js" crossorigin="anonymous"></script>
+  <script src="nexnova.js"></script>
+  
+</head>
+
+<body>
+
+  <div class="title">
+    <h1>NEXNOVA '24</h1>
+    <span>Annual ICT Day Of St. Sylvester's College Kandy</span>
+  </div>
+
+  <div class="nav">
+    <a href="#about"><div class="nav-btn">About</div></a>
+    <a href="#gallery"><div class="nav-btn">Gallery</div></a>
+    <a href="#winners"><div class="nav-btn">Winners</div></a>
+    <a href="agenda.html"><div class="nav-btn">Agenda</div></a>
+    <a href="#sponsor"><div class="nav-btn">Collaborations</div></a>
+  </div>
+
+  <section class="carousel-cover">
+    <div class="pic-ctn">
+      <img src="img/comittee/24_25/assistant_secretary_kabhilash.webp" alt="" class="pic">
+      <img src="img/comittee/24_25/chief_coordinator_chethiya.webp" alt="" class="pic">
+      <img src="img/comittee/24_25/committee_leader_theviru.webp" alt="" class="pic">
+      <img src="img/comittee/24_25/committee_member_charith.webp" alt="" class="pic">
+      <img src="img/comittee/24_25/committee_member_manuja.webp" alt="" class="pic">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-ctn">
+      <h1>NEXNOVA</h1>
+      <p>
+        NEXNOVA is the annual ICT day of St. Sylvester's College Kandy. It is organized by the ICT Society of the college.
+        The event is organized to showcase the talents of the students in the field of ICT and to provide a platform for them to
+        showcase their skills. The event includes a variety of competitions and workshops that are designed to help students
+        develop their skills in the field of ICT. The event also includes a number of guest speakers who are experts in the field
+        of ICT and who can provide valuable insights and advice to the students.
+      </p>
+    </div>
+  </section>
+
+  <section class="winners-ctn" id="winners">
+    <h1>Winners</h1>
+
+    <div class="parent">
+      <div class="div1 comp"> </div>
+      <div class="div2 comp"> </div>
+      <div class="div3 comp"> </div>
+      <div class="div4 comp"> </div>
+      <div class="div5 comp"> </div>
+    </div>
+  </section>
+
+  <div class="or-hrdivider" id="ordiv">
+    <hr class="or-hr">
+      <span class="or-hr-text">GALLERY</span>
+    <hr class="or-hr">
+  </div>
+
+  <?php include 'test.html'; ?>
+
+</body>
+
+</html>

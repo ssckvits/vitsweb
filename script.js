@@ -46,3 +46,27 @@ window.addEventListener('load', function () {
       const loader = document.querySelector('.loading');
       loader.classList.add('hidden');
 });
+
+
+const eventDate = new Date("Feb 07, 2025 09:00:00").getTime();
+
+const countdownInterval = setInterval(function() {
+  
+  const now = new Date().getTime();
+
+  const timeRemaining = eventDate - now;
+
+  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+//   const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+  document.getElementById("timer").innerHTML = days + " DAYS  " + hours + " HOURS  "
+  + minutes + " MINS  ";
+
+  if (timeRemaining < 0) {
+    clearInterval(countdownInterval);
+    document.getElementById("timer").innerHTML = "Event has started!";
+  }
+
+}, 1000);
