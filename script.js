@@ -42,10 +42,10 @@ function nexnovaSoon(){
   alert("Sorry, Registrations are Closed. See You Next Time!");
 }
 
-window.addEventListener('load', function () {
-      const loader = document.querySelector('.loading');
-      loader.classList.add('hidden');
-});
+// window.addEventListener('load', function () {
+//       const loader = document.querySelector('.loading');
+//       loader.classList.add('hidden');
+// });
 
 
 const eventDate = new Date("Feb 07, 2025 09:00:00").getTime();
@@ -70,3 +70,15 @@ const countdownInterval = setInterval(function() {
   }
 
 }, 1000);
+
+
+document.querySelectorAll(".nexnova-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      window.location.href = "/nexnova/nexnova-mobile.html";
+    } else {
+      window.location.href = "nexnova.html"; 
+    }
+  });
+});

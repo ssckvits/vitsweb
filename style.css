@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 body,
 html {
     margin: 0px;
@@ -379,6 +383,7 @@ nav .expandMenu {
     padding-inline: 15px;
     transition: .2s ease-in-out;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .nexnova-btn:hover{
     box-shadow: 0 0 5px 0 rgb(41, 134, 255);
@@ -794,6 +799,17 @@ h3 {
 
     .custom-shape-divider-top-1720176904 svg {
         height: 80px !important;
+    }
+    .countdown-time span{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+    #timer{
+        font-size: 1.5rem;
+        text-align: center;
+        justify-content: center;
     }
 }
 

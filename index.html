@@ -5,19 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.png" type="img/svg">
     <title>VITS</title>
+
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="Nexnova/load1.css">
     <script src="https://kit.fontawesome.com/28838d7a86.js" crossorigin="anonymous"></script>
     <script defer src="script.js"></script>
+    <script src="Nexnova/loading.js"></script>
 </head>
 <body>
      
+    <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+            <circle class="back" cx="43" cy="43" r="40"></circle>
+            <circle class="front" cx="43" cy="43" r="40"></circle>
+            <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+            <circle class="back" cx="30" cy="30" r="27"></circle>
+            <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+            <circle class="back" cx="17" cy="17" r="14"></circle>
+            <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text" data-text="Loading Content... Please Wait..."></div>
+    </div>
+
     <div class="responsiveNav">
         <ul>
             <a href="index.html"><li>Home</li></a>
             <a href="projects.html"><li>Projects</li></a>
             <a href="achievements.html"><li>Achievements</li></a>
             <a href="about.html"><li>About</li></a>
-            <a href="#"><li style="color: yellow;" onclick="nexnovaSoon()">Nexnova</li></a>
+            <a href="#"><li style="color: yellow;" class="nexnova-btn">Nexnova</li></a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScCrV8KVaavJexzcOhiy8JcWuw2xK-QBK8FMWWRzBaI6jHEAw/viewform?usp=sf_link"><li style="color: yellow;">Join</li></a>
         </ul>
     </div>
@@ -28,7 +48,7 @@
             <a href="projects.html"><button class="button">Projects</button></a>
             <a href="achievements.html"><button class="button">Achievements</button></a>
             <a href="about.html"><button class="button">About</button></a>
-            <a href="#"><button class="button specialButton">Nexnova</button></a>
+            <a href="#"><button class="button specialButton nexnova-btn" style="border-radius: 2px;">Nexnova</button></a>
         </div>
         <img src="img/vitslogo.png">
         <i class="fa-solid fa-bars expandMenu"></i>
@@ -54,9 +74,9 @@
             <span>See You Soon!!!</span>
         </div>
     </div>
-    <!-- <div class="nexnova-btn-cover">
-        <button class="button specialButton nexnova-btn" onclick="window.location.href='Nexnova.html'">Explore</button>
-    </div> -->
+    <div class="nexnova-btn-cover">
+        <button class="button specialButton nexnova-btn">Explore</button>
+    </div>
     <div class="section gallery">
         <div class="custom-shape-divider-top-1720176904">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
