@@ -543,7 +543,7 @@ nav .expandMenu {
 }
 
 .gridItem .img {
-    max-height: 300px;
+    max-height: 300px !important;
     box-sizing: border-box;
     overflow: hidden;
 }
