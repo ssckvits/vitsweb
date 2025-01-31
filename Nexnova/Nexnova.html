@@ -7,15 +7,93 @@
 
   <title>NEXNOVA '24</title>
 
-  <link rel="stylesheet" type="text/css" href="Nexnova-main.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" type="text/css" href="/Nexnova/Nexnova-main.css">
+  <link rel="stylesheet" href="/Nexnova/divider.css">
+  <link rel="stylesheet" href="/Nexnova/footer.css">
+  <link rel="stylesheet" href="/Nexnova/svg.css">
+  <link rel="stylesheet" href="/Nexnova/load1.css">
+  <link rel="stylesheet" href="/Nexnova/responsive.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   <script src="https://kit.fontawesome.com/28838d7a86.js" crossorigin="anonymous"></script>
-  <script src="nexnova.js"></script>
+  <script defer src="/Nexnova/nexnova.js"></script>
+  <script defer src="/Nexnova/loading.js"></script>
 
 </head>
 
-<body>
+<body class="no-animation">
+
+    <div id="load1">
+        <span class="loading-circle sp1">
+        <span class="loading-circle sp2">
+            <span class="loading-circle sp3"></span>
+        </span>
+        </span>
+    </div>
+
+    <div id="wifi-loader">
+      <svg class="circle-outer" viewBox="0 0 86 86">
+          <circle class="back" cx="43" cy="43" r="40"></circle>
+          <circle class="front" cx="43" cy="43" r="40"></circle>
+          <circle class="new" cx="43" cy="43" r="40"></circle>
+      </svg>
+      <svg class="circle-middle" viewBox="0 0 60 60">
+          <circle class="back" cx="30" cy="30" r="27"></circle>
+          <circle class="front" cx="30" cy="30" r="27"></circle>
+      </svg>
+      <svg class="circle-inner" viewBox="0 0 34 34">
+          <circle class="back" cx="17" cy="17" r="14"></circle>
+          <circle class="front" cx="17" cy="17" r="14"></circle>
+      </svg>
+      <div class="text" data-text="Loading Content... Please Wait..."></div>
+    </div>
+
+  <button class="button">
+    <div class="button-box">
+      <span class="button-elem">
+        <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+          ></path>
+        </svg>
+      </span>
+      <span class="button-elem">
+        <svg viewBox="0 0 46 40">
+          <path
+            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+          ></path>
+        </svg>
+      </span>
+    </div>
+  </button>
+
+  <div class="shape-bg-ctn" id="shape-bg-ctn">
+    <svg class="shadow-md dark:border-slate-700 svg-bg" viewBox="0 0 844.8 475.2"  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <rect class="bg" id="bg" x="0" y="0"  fill="none"></rect>
+      <line id="line" class="line1"  opacity="0.7" x1="10"                  y1="79"                  x2="62.8"                y2="131.8"              stroke-linecap="round" stroke="#616161" stroke-width="16"></line>
+      <line id="line" class="line2"  opacity="0.9" x1="90"                  y1="237.39999999999998"  x2="143"                 y2="290.4"              stroke-linecap="round" stroke="#15243d" stroke-width="25"></line>
+      <line id="line" class="line3"  opacity="0.1" x1="0"                   y1="346"                 x2="52.8"                y2="398.8"              stroke-linecap="round" stroke="#2a559c" stroke-width="23"></line>
+      <line id="line" class="line4"  opacity="0.3" x1="208.95999999999998"  y1="77"                  x2="245.95999999999998"  y2="114"                stroke-linecap="round" stroke="#2a559c" stroke-width="16"></line>
+      <line id="line" class="line5"  opacity="0.1" x1="168.95999999999998"  y1="159.25714285714287"  x2="191.5885714285714"   y2="181.8857142857143"  stroke-linecap="round" stroke="#616161" stroke-width="16"></line>
+      <line id="line" class="line6"  opacity="0.1" x1="248.95999999999998"  y1="227.14285714285714"  x2="284.95999999999998"  y2="263.1428571428571"  stroke-linecap="round" stroke="#15243d" stroke-width="29"></line>
+      <line id="line" class="line7"  opacity="0.3" x1="168.95999999999998"  y1="278.4"               x2="191.5885714285714"   y2="301.0285714285714"  stroke-linecap="round" stroke="#616161" stroke-width="16"></line>
+      <line id="line" class="line8"  opacity="0.7" x1="228.95999999999998"  y1="376.2857142857142"   x2="251.5885714285714"   y2="398.91428571428565" stroke-linecap="round" stroke="#2a559c" stroke-width="16"></line>
+      <line id="line" class="line9"  opacity="0.1" x1="128.95999999999998"  y1="404.17142857142846"  x2="164.95999999999998"  y2="440.17142857142846" stroke-linecap="round" stroke="#7678ED" stroke-width="18"></line>
+      <line id="line" class="line10" opacity="0.1" x1="168.95999999999998"  y1="515.4285714285713"   x2="192.95999999999998"  y2="539.4285714285713"  stroke-linecap="round" stroke="#2a559c" stroke-width="38"></line>
+      <line id="line" class="line11" opacity="0.1" x1="337.91999999999996"  y1="-52"                 x2="369.59999999999997"  y2="-20.32"             stroke-linecap="round" stroke="#15243d" stroke-width="16"></line>
+      <line id="line" class="line12" opacity="0.1" x1="337.91999999999996"  y1="43.03999999999999"   x2="393.91999999999996"  y2="99.03999999999999"  stroke-linecap="round" stroke="#616161" stroke-width="25"></line>
+      <line id="line" class="line13" opacity="0.9" x1="337.91999999999996"  y1="166.04"              x2="369.59999999999997"  y2="197.72"             stroke-linecap="round" stroke="#2a559c" stroke-width="22"></line>
+      <line id="line" class="line14" opacity="0.9" x1="437.91999999999996"  y1="261.08"              x2="469.59999999999997"  y2="292.76"             stroke-linecap="round" stroke="#616161" stroke-width="35"></line>
+      <line id="line" class="line15" opacity="0.9" x1="337.91999999999996"  y1="356.12"              x2="369.59999999999997"  y2="387.8"              stroke-linecap="round" stroke="#616161" stroke-width="16"></line>
+      <line id="line" class="line16" opacity="0.1" x1="506.87999999999994"  y1="16"                  x2="584.8799999999999"   y2="94"                 stroke-linecap="round" stroke="#616161" stroke-width="39"></line>
+      <line id="line" class="line17" opacity="0.9" x1="586.87999999999994"  y1="250"                 x2="639.68"              y2="302.8"              stroke-linecap="round" stroke="#15243d" stroke-width="16"></line>
+      <line id="line" class="line18" opacity="0.1" x1="506.87999999999994"  y1="408.4"               x2="559.68"              y2="461.2"              stroke-linecap="round" stroke="#2a559c" stroke-width="16"></line>
+      <line id="line" class="line22" opacity="0.9" x1="627.91999999999996"  y1="356.04"              x2="659.59999999999997"  y2="387.72"             stroke-linecap="round" stroke="#2a559c" stroke-width="22"></line>
+      <line id="line" class="line19" opacity="0.9" x1="720.8399999999999"   y1="29"                  x2="817.8399999999999"   y2="126"                stroke-linecap="round" stroke="#2a559c" stroke-width="20"></line>
+      <line id="line" class="line20" opacity="0.3" x1="675.8399999999999"   y1="231.6"               x2="731.8399999999999"   y2="287.6"              stroke-linecap="round" stroke="#616161" stroke-width="35"></line>
+      <line id="line" class="line21" opacity="0.7" x1="775.8399999999999"   y1="393.2"               x2="841.8399999999999"   y2="459.2"              stroke-linecap="round" stroke="#15243d" stroke-width="16"></line>
+    </svg>
+  </div>
 
   <div class="title">
     <h1>NEXNOVA '24</h1>
@@ -32,7 +110,7 @@
     <a href="#winners">
       <div class="nav-btn">Winners</div>
     </a>
-    <a href="agenda.html">
+    <a href="#highlight">
       <div class="nav-btn">Agenda</div>
     </a>
     <a href="#collab">
@@ -40,13 +118,13 @@
     </a>
   </div>
 
-  <section class="carousel-cover">
+  <section class="carousel-cover" id="carousel">
     <div class="pic-ctn">
-      <img src="img/comittee/24_25/assistant_secretary_kabhilash.webp" alt="" class="pic">
-      <img src="img/comittee/24_25/chief_coordinator_chethiya.webp" alt="" class="pic">
-      <img src="img/comittee/24_25/committee_leader_theviru.webp" alt="" class="pic">
-      <img src="img/comittee/24_25/committee_member_charith.webp" alt="" class="pic">
-      <img src="img/comittee/24_25/committee_member_manuja.webp" alt="" class="pic">
+      <img id="most-popular" src="/img/nexnova/most popular new.webp" alt="" class="pic pop">
+      <img src="/img/nexnova/comp.webp" alt="" class="pic">
+      <img src="/img/nexnova/Sponsor.webp" alt="" class="pic">
+      <img src="/img/nexnova/most popular new.webp" alt="" class="pic pop">
+      <img src="/img/nexnova/comp.webp" alt="" class="pic">
     </div>
   </section>
 
@@ -73,7 +151,7 @@
         support to continue making a lasting
         impact in the field of ICT and education.
       </p>
-      <h2>EVENT HIGHLIGHT</h2>
+      <h2 id="highlight">EVENT HIGHLIGHT</h2>
       <ul>
         <li>To educate participant about Networking and Future.</li>
         <li>invite participants to improve their knowledge.</li>
@@ -81,6 +159,55 @@
         <li>Quiz Competition for Entertainment.</li>
       </ul>
     </div>
+    
+    <div class="card-ctn" id="agenda">
+      <div class="card">
+        <div class="content">
+          <div class="back">
+            <div class="back-content">
+    
+              <svg class="paper w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+              </svg>
+  
+              <strong>Agenda</strong>
+            </div>
+          </div>
+          <div class="front">
+          
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+    
+            <div class="front-content">
+              <div class="description">
+                <div class="card-title">
+                  <p class="card-title">
+                    <strong>View Agenda</strong>
+                  </p>
+                </div>
+              </div>
+
+              <div class="agenda-btn-container">
+                <button class="agenda-btn nav-btn">
+                  <span>View</span>
+                  <svg class="right-arrow w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                  </svg>                  
+                </button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </section>
 
   <section class="winners-ctn" id="winners">
@@ -91,11 +218,16 @@
       <div class="div2 comp"></div>
       <div class="div3 comp"></div>
       <div class="div4 comp"></div>
-      <div class="div5 comp"></div>
-    </div>
+      <div class="div7 comp"></div>
+      <div class="div8 comp"></div>
+      <!-- <div class="vote-cover">
+        <div class="div5 comp"></div>
+        <button class="vote">VOTE NOW</button>
+      </div>
+    </div> -->
   </section>
 
-  <section id="gallery">
+  <!-- <section id="gallery">
     <h1>Gallery</h1>
 
     <div class="gallery-container">
@@ -106,18 +238,18 @@
         <div class="pic4 absolute border hover"></div>
         <div class="pic5 absolute border hover"></div>
         <div class="pic6 absolute border hover"></div>
-        <div class="pic7 absolute border hover"></div>
-        <div class="pic8 absolute border hover"></div>
+        <div class="pic7 absolute border "></div>
+        <div class="pic8 absolute border "></div>
       </div>
     </div>
 
     <div class="glry-btn-ctn">
-      <a href="#gallery">
-        <div class="nav-btn">VIEW</div>
+      <a href="gallery.html">
+        <div class="nav-btn glry-view">Coming Soon!</div>
       </a>
     </div>
 
-  </section>
+  </section> -->
 
   <section id="collab">
     <div class="or-hrdivider" id="ordiv">
@@ -127,15 +259,44 @@
     </div>
 
     <div class="collab-desc">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nulla ex vitae, nostrum dolores consequatur
-      minima ipsa doloribus neque architecto inventore aliquid maxime sunt! Atque impedit illo voluptate in dignissimos.
+      We are immensely grateful to the esteemed collaborators who have generously extended their support in sponsoring
+      our upcoming Annual ICT Day. Your contributions and dedication are vital in bringing this event to life, and we
+      are confident that your partnership will help us achieve new heights of innovation and excellence. Together, we
+      look forward to creating an inspiring and memorable experience for everyone involved. Thank you for being an
+      integral part of this journey!
+    </div>
+
+    <div class="collabs">
+      <img src="/img/nexnova/collab/pioneer.jpeg" alt="">
+      <img src="/img/nexnova/collab/ICBT.jpeg" alt="">
+      <img src="/img/nexnova/collab/APIIT.jpeg" alt="">
     </div>
   </section>
 
-  <link rel="stylesheet" href="footer.css">
-
-  <footer>
-
+  <footer id="footer">
+    <div class="or" id="ordiv">
+      <hr class="line no-right">
+      <span class="ftr-title">&#9675; NEXNOVA '24 &#9675;</span>
+      <hr class="line no-left">
+    </div>
+    <div class="footer-ctn">
+      <div class="rights">
+        <span>&#169; 2024 VITS &nbsp;|&nbsp; All Rights Reserved &nbsp;|&nbsp; St. Sylvester's College Kandy</span>
+      </div>
+      <div class="social">
+        <i class='bx bxl-facebook' onclick="window.location.href=''"><span>Facebook</span></i>
+        <i class='bx bxl-instagram' onclick="window.location.href=''"><span>Instagram</span></i>
+        <i class='bx bxl-youtube' onclick="window.location.href=''"><span>Youtube</span></i>
+        <i class='bx bx-globe' onclick="window.location.href=''"><span>vits.lk</span></i>
+      </div>
+      <div class="other">
+        <i onclick="window.location.href='about.html'">ABOUT</i>
+        <i onclick="window.location.href='about.html#contact'">CONTACT</i>
+        <i onclick="window.location.href=''">RESOURCES</i>
+        <i onclick="window.location.href=''">TERMS OF SERVICE</i>
+        <i onclick="window.location.href=''">Shool Website</i>
+      </div>
+    </div>
   </footer>
 </body>
 

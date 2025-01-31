@@ -19,6 +19,6 @@ document.querySelector('.button').addEventListener('click', () => {
     load1.style.opacity = '1'
 
     setTimeout(() => {
-        window.location.href='/nexnova.html';
+        window.location.href='/nexnova/nexnova.html';
     }, 1000);
 });
