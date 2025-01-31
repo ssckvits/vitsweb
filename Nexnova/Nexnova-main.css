@@ -831,6 +831,6 @@ img:nth-child(5) {
 .collabs img{
   height: 100px;
   width: auto;
-  margin-inline: 20px;
   border-radius: 15px;
+  margin: 20px;
 }
