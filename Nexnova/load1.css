@@ -85,7 +85,7 @@ body.no-animation *:not(#wifi-loader):not(#wifi-loader *) {
 
 #wifi-loader {
     --background: #62abff;
-    --front-color: #4f29f0;
+    --front-color: #2968f0;
     --back-color: #c3c8de;
     --text-color: #b2b2b3;
     width: 100vw;

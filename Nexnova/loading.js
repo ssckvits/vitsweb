@@ -83,8 +83,16 @@ document.querySelector('.button').addEventListener('click', () => {
 // });
 
 document.querySelectorAll(".pop").forEach(function (element) {
+
+    const popimg = document.getElementById('most-popular');
+
+    popimg.style.zIndex = '999';
+
     element.addEventListener("click", function () {
-        
+        const load1 = document.getElementById('load1');
+
+        load1.style.zIndex = '9999';
+        load1.style.opacity = '1';
 
         window.location.href = "https://whatsapp.com/channel/0029VafD2jtJP20wQwyCkz0t";
     });
