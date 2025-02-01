@@ -1,11 +1,16 @@
 #funitem{
     /* background: red; */
     width: 100%;
-    height: fit-content;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.title{
+    margin-top: -10vh;
+    top: 0 !important;
+    /* background: red; */
 }
 .subtitle{
     width: 100%;
@@ -125,9 +130,9 @@ footer{
     position: absolute;
     align-self: center;
     justify-self: center;
-    top: 54vh;
+    top: 45vh;
     background: white;
-    height: 20vh;
+    height: 25vh;
     width: 100vw;
     transition: .5s ease-in-out;
     transform: translateX(100vw);
@@ -143,9 +148,10 @@ footer{
 #q1label{
     visibility: hidden;
     opacity: 0;
+    margin-left: -200px;
 }
 #q1:focus + #q1label{
-    left: -60px;
+    margin-left: -300px;
 }
 .next2{
     position: absolute;

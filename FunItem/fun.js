@@ -1,6 +1,6 @@
 
 document.getElementById('next1').addEventListener('click', () => {
-    const sq = document.querySelector('.sq');
+    const sq = document.getElementById('sq1');
     const sclName = document.getElementById('school-name');
     const scllabel = document.getElementById('scllabel');
     const next1 = document.getElementById('next1');
@@ -47,3 +47,8 @@ document.getElementById('next1').addEventListener('click', () => {
         alert('Enter Your School Name');
     }
 });
+
+document.querySelector('.next2').addEventListener('click', () => {
+    const sq2 = getElementById('sq2');
+    
+})
