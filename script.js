@@ -76,9 +76,9 @@ document.querySelectorAll(".nexnova-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
 
     if (window.matchMedia("(max-width: 768px)").matches) {
-      window.location.href = "Nexnova/Nexnova-mobile.html";
+      window.location.href = "nexnova/nexnova-mobile.html";
     } else {
-      window.location.href = "Nexnova/Nexnova.html"; 
+      window.location.href = "nexnova/nexnova.html"; 
     }
   });
 });
