@@ -44,7 +44,7 @@ document.querySelector('.agenda-btn').addEventListener('click', () => {
     load1.style.opacity = '1'
 
     setTimeout(() => {
-        window.location.href = '/Nexnova/agenda-mobile.html';
+        window.location.href = '/nexnova/agenda-mobile.html';
     }, 1500);
 });
 
