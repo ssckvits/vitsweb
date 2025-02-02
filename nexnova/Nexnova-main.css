@@ -854,6 +854,11 @@ img:nth-child(5) {
   justify-self: center;
   margin-top: 30px;
 }
+.collabs h3{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
 .collabs img{
   height: 100px;
   width: auto;
