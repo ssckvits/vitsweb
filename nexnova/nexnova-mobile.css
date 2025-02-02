@@ -793,7 +793,7 @@ footer {
 
 .social {
     height: fit-content;
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -801,7 +801,7 @@ footer {
     margin-inline: 0;
     justify-self: center;
     margin-top: 10px;
-    margin-left: -5vw;
+    /* margin-left: -5vw; */
     /* background: #000; */
 }
 
