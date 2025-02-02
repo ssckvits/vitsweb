@@ -847,6 +847,8 @@ footer {
     margin-top: 20px;
     border-radius: 20px;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, .2);
     box-shadow: 0 0 10px var(--border);
     flex-wrap: wrap;
     display: flex;
