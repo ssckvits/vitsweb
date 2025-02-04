@@ -71,6 +71,7 @@ document.querySelector('.button').addEventListener('click', () => {
     }, 1500);
 });
 
+
 // document.querySelectorAll('.pic').addEventListener('click', () => {
 //     const load1 = document.getElementById('load1');
 

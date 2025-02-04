@@ -153,13 +153,54 @@ window.addEventListener("load", function () {
   });
 });
 
+
+
+
+// document.getElementById('submit').addEventListener('click', () => {
+//   const form = document.getElementById('formId');
+//   const success = document.getElementById('success');
+  
+//   form.style.opacity = '0';
+//   form.style.visibility = 'hidden';
+//   form.style.zIndex = '-1';
+
+//   success.style.visibility = 'visible';
+//   success.style.opacity = '1';
+//   success.style.zIndex = 10;
+// });
+
 document.getElementById('submit').addEventListener('click', () => {
   const form = document.getElementById('formId');
-  
-  form.style.opacity = '0';
-  form.style.visibility = 'hidden';
-  form.style.zIndex = '-1';
+  const success = document.getElementById('success');
+
+  if (sclName.value.trim() !== "") {
+    console.log('submit clicked');
+
+
+    setTimeout(() => {
+
+
+      
+    }, 30);
+
+    setTimeout(() => {
+
+      form.style.opacity = '0';
+      form.style.visibility = 'hidden';
+      form.style.zIndex = '-1';
+    
+      success.style.visibility = 'visible';
+      success.style.opacity = '1';
+      success.style.zIndex = 10;
+
+    }, 1000);
+  } else {
+    alert('Please Answer All the Questions');
+  }
 });
+
+
+
 
 document.getElementById("submit").addEventListener("click", function() {
 
@@ -184,4 +225,10 @@ document.getElementById("submit").addEventListener("click", function() {
     confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
     confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
   }, 500);
+});
+
+document.getElementById('done').addEventListener('click', () => {
+  success.style.opacity = '0';
+  success.style.visibility = 'hidden';
+  success.style.zindex = '-1';
 });
