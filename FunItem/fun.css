@@ -35,6 +35,9 @@
     transition: .3s ease-in-out;
     padding-inline: 10px;
 }
+#formId{
+    transition: .3s ease-in-out;
+}
 .form-group {
     margin-top: 40px;
     position: relative;
@@ -239,6 +242,26 @@ footer{
 .submit-btn {
    position: absolute;
    margin-top: 10vh; 
+   visibility: hidden;
    opacity: 0;
    z-index: -1;
+   cursor: pointer;
+}
+
+.success{
+    position: fixed;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, .3);
+    margin-top: 5vh;
+    height: 60vh;
+    width: 60vw;
+    border-radius: 20px;
+    border: 2px solid rgb(85, 148, 230);
+    box-shadow: 0 0 10px rgb(85, 148, 230);
 }

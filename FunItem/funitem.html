@@ -13,6 +13,7 @@
 
     <script defer src="/nexnova/loading.js"></script>
     <script defer src="/FunItem/fun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
     <title>FUN ITEM | NEXNOVA</title>
 
@@ -79,7 +80,7 @@
           </div>
           <input type="text" id="Q2" required placeholder=" " autocomplete="off" name="Answer2">
           <label id="q2label" for="Question2">Answer</label>
-          <div class="submit-btn">
+          <div class="submit-btn" id="submit-btn">
             <input type="submit" value="Submit" id="submit">
           </div>
           
@@ -88,6 +89,8 @@
 
       <div class="sq" id="sq1"></div>
       <div class="sq" id="sq2"></div>
+
+      <div class="success"></div>
       
     </section>
     
