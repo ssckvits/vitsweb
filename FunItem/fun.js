@@ -154,58 +154,32 @@ window.addEventListener("load", function () {
 });
 
 
-
-
-// document.getElementById('submit').addEventListener('click', () => {
-//   const form = document.getElementById('formId');
-//   const success = document.getElementById('success');
-  
-//   form.style.opacity = '0';
-//   form.style.visibility = 'hidden';
-//   form.style.zIndex = '-1';
-
-//   success.style.visibility = 'visible';
-//   success.style.opacity = '1';
-//   success.style.zIndex = 10;
-// });
-
-document.getElementById('submit').addEventListener('click', () => {
+document.getElementById('submit').addEventListener('click', (event) => {
+  const ans1 = document.getElementById('Q1').value.trim();
+  const ans2 = document.getElementById('Q2').value.trim();
   const form = document.getElementById('formId');
   const success = document.getElementById('success');
 
-  if (sclName.value.trim() !== "") {
-    console.log('submit clicked');
-
-
-    setTimeout(() => {
-
-
-      
-    }, 30);
-
-    setTimeout(() => {
-
-      form.style.opacity = '0';
-      form.style.visibility = 'hidden';
-      form.style.zIndex = '-1';
-    
-      success.style.visibility = 'visible';
-      success.style.opacity = '1';
-      success.style.zIndex = 10;
-
-    }, 1000);
-  } else {
-    alert('Please Answer All the Questions');
+  // Check if both fields are filled
+  if (ans1 === "" || ans2 === "") {
+    alert('Please complete the quiz before submitting.');
+    return;
   }
-});
 
+  console.log('confetti clicked');
 
+  // Hide the form
+  form.style.opacity = '0';
+  form.style.visibility = 'hidden';
+  form.style.zIndex = '-1';
 
+  setTimeout(() => {
+    success.style.visibility = 'visible';
+    success.style.opacity = '1';
+    success.style.zIndex = 10;
+  }, 1000);
 
-document.getElementById("submit").addEventListener("click", function() {
-
-  console.log('confetti clicked')
-  
+  // Confetti animation
   var duration = 3 * 1000;
   var animationEnd = Date.now() + duration;
   var defaults = { startVelocity: 20, spread: 360, ticks: 90, zIndex: 990 };
@@ -214,7 +188,7 @@ document.getElementById("submit").addEventListener("click", function() {
     return Math.random() * (max - min) + min;
   }
 
-  var interval = setInterval(function() {
+  var interval = setInterval(function () {
     var timeLeft = animationEnd - Date.now();
 
     if (timeLeft <= 0) {
@@ -226,6 +200,49 @@ document.getElementById("submit").addEventListener("click", function() {
     confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
   }, 500);
 });
+
+
+
+// document.getElementById('submit').addEventListener('click', () => {
+//   const form = document.getElementById('formId');
+//   const success = document.getElementById('success');
+  
+//   form.style.opacity = '0';
+//   form.style.visibility = 'hidden';
+//   form.style.zIndex = '-1';
+
+//   setTimeout(() => {
+//     success.style.visibility = 'visible';
+//     success.style.opacity = '1';
+//     success.style.zIndex = 10;
+//   }, 1000);
+// });
+
+
+// document.getElementById("submit").addEventListener("click", function() {
+
+//   console.log('confetti clicked')
+  
+//   var duration = 3 * 1000;
+//   var animationEnd = Date.now() + duration;
+//   var defaults = { startVelocity: 20, spread: 360, ticks: 90, zIndex: 990 };
+
+//   function randomInRange(min, max) {
+//     return Math.random() * (max - min) + min;
+//   }
+
+//   var interval = setInterval(function() {
+//     var timeLeft = animationEnd - Date.now();
+
+//     if (timeLeft <= 0) {
+//       return clearInterval(interval);
+//     }
+
+//     var particleCount = 200 * (timeLeft / duration);
+//     confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
+//     confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
+//   }, 500);
+// });
 
 document.getElementById('done').addEventListener('click', () => {
   success.style.opacity = '0';
