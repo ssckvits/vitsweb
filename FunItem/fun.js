@@ -155,13 +155,14 @@ window.addEventListener("load", function () {
 
 
 document.getElementById('submit').addEventListener('click', (event) => {
+  const sclname = document.getElementById('school-name').value.trim();
   const ans1 = document.getElementById('Q1').value.trim();
   const ans2 = document.getElementById('Q2').value.trim();
   const form = document.getElementById('formId');
   const success = document.getElementById('success');
 
   // Check if both fields are filled
-  if (ans1 === "" || ans2 === "") {
+  if (sclname === "" ||ans1 === "" || ans2 === "") {
     alert('Please complete the quiz before submitting.');
     return;
   }
