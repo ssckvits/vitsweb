@@ -15,6 +15,7 @@ document.getElementById('next1').addEventListener('click', () => {
 
 
     sq.style.transform = 'translateX(-100vw)';
+    sq.style.width = '100vw';
 
 
     setTimeout(() => {
@@ -61,12 +62,13 @@ document.querySelector('.next2').addEventListener('click', () => {
   const ans2 = document.getElementById('Q2');
   const next3 = document.querySelector('.next3');
   const submit = document.getElementById('submit-btn');
-  const submitInput = document.getElementById('submit')
+  const submitInput = document.getElementById('submit');
 
   if (ans1.value.trim() !== "") {
     console.log('next2 clicked');
 
     sq2.style.transform = 'translateX(-110vw)';
+    sq2.style.width = '100vw'
 
     setTimeout(() => {
       console.log('q1 hidden');
@@ -103,21 +105,21 @@ document.querySelector('.next2').addEventListener('click', () => {
       q2label.style.opacity = '1';
       q2label.style.zIndex = '10';
 
-      // next3.style.visibility = 'visible';
-      // next3.style.opacity = '1';
-      // next3.style.zIndex = '10';
+      next3.style.visibility = 'visible';
+      next3.style.opacity = '1';
+      next3.style.zIndex = '10';
 
-      console.log('submit styling');
+      // console.log('submit styling');
 
-      submit.style.visibility = 'visible';
-      submit.style.opacity = '1';
-      submit.style.zIndex = '10';
+      // submit.style.visibility = 'visible';
+      // submit.style.opacity = '1';
+      // submit.style.zIndex = '10';
 
-      submitInput.style.visibility = 'visible';
-      submitInput.style.opacity = '1';
-      submitInput.style.zIndex = '10';
+      // submitInput.style.visibility = 'visible';
+      // submitInput.style.opacity = '1';
+      // submitInput.style.zIndex = '10';
 
-      console.log('submit styling end');
+      // console.log('submit styling end');
     }, 1000);
   } else {
     console.log('Not found');
@@ -125,6 +127,59 @@ document.querySelector('.next2').addEventListener('click', () => {
     alert('Please answer the Question');
   }
 });
+
+
+document.querySelector('.next3').addEventListener('click', () => {
+  const sq3 = document.getElementById('sq3');
+  const ans3 = document.getElementById('Q3');
+  const q3label = document.getElementById('q3label');
+  const question3 = document.getElementById('question3');
+  const next3 = document.querySelector('.next3');
+  const question2 = document.getElementById('question2');
+  const q2label = document.getElementById('q2label');
+  const ans2 = document.getElementById('Q2');
+  const next4 = document.querySelector('.next4');
+  const submit = document.getElementById('submit-btn');
+  const submitInput = document.getElementById('submit')
+
+  if (ans3.value.trim() !== "") {
+    console.log('next3 clicked');
+
+    sq3.style.transform = 'translateX(-110vw)';
+    sq3.style.width = '100vw'
+
+    setTimeout(() => {
+      console.log('q2 hidden');
+
+      question2.style.opacity = '0';
+      question2.style.visibility = 'hidden';
+      question2.style.zIndex = '-1';
+
+      ans2.style.opacity = '0';
+      ans2.style.visibility = 'hidden';
+      ans2.style.zIndex = '-1';
+
+      q2label.style.opacity = '0';
+      q2label.style.visibility = 'hidden';
+      q2label.style.zIndex = '-1';
+
+      next3.style.opacity = '0';
+      next3.style.visibility = 'hidden';
+      next3.style.zIndex = '-1';
+    }, 20);
+
+    setTimeout(() => {
+
+      next4.style.visibility = 'visible';
+      next4
+    }, 1000);
+  } else {
+    console.log('Not found');
+
+    alert('Please answer the Question');
+  }
+});
+
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbx4JwMBB862Bi1jdxrRgAR5h3P8NbTcLwTYudMoBJxXb3qgFiMyss4pBoNlKyGLShio/exec';
 

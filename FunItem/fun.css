@@ -135,7 +135,7 @@ footer{
     top: 53vh;
     background: white;
     height: 25vh;
-    width: 100vw;
+    width: 0;
     transition: .5s ease-in-out;
     transform: translateX(100vw);
     z-index: -1;
@@ -237,6 +237,54 @@ footer{
     line-height: 50px;
     font-weight: 400;
     cursor: text;
+}
+
+
+#question3{
+    position: absolute;
+    top: 0;
+    margin-top: -120px;
+    /* background: red; */
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+#question3:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(90, 89, 89, 0.473);
+    padding-inline: 20px;
+}
+#question3 span{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    line-height: 50px;
+    font-weight: 400;
+    cursor: text;
+}
+#Q3{
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+#q3label{
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -200px;
+}
+#q3:focus + #q3label{
+    margin-left: -300px;
+}
+.next3{
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .submit-btn {
