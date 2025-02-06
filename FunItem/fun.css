@@ -397,8 +397,8 @@ footer{
     border-radius: 20px;
     border: 2px solid rgb(85, 148, 230);
     box-shadow: 0 0 10px rgb(85, 148, 230);
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
     transition: .4s ease-in-out;
 }
 .wrapper{
@@ -515,5 +515,12 @@ footer{
     width: auto;
     margin: 50px;
     border-radius: 5px;
-    
+}
+#options{
+    margin-top: 20px;
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20vw;
 }

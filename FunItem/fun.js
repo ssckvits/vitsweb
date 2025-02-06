@@ -160,10 +160,15 @@ document.getElementById('submit').addEventListener('click', (event) => {
   const ans2 = document.getElementById('Q2').value.trim();
   const form = document.getElementById('formId');
   const success = document.getElementById('success');
+  const fail = document.getElementById('fail');
 
   // Check if both fields are filled
   if (sclname === "" ||ans1 === "" || ans2 === "") {
-    alert('Please complete the quiz before submitting.');
+    console.log('submit clicked');
+
+    fail.style.visibility = 'visible'
+    fail.style.opacity = '1';
+    fail.style.zIndex = '10'
     return;
   }
 
@@ -202,51 +207,16 @@ document.getElementById('submit').addEventListener('click', (event) => {
   }, 500);
 });
 
-
-
-// document.getElementById('submit').addEventListener('click', () => {
-//   const form = document.getElementById('formId');
-//   const success = document.getElementById('success');
-  
-//   form.style.opacity = '0';
-//   form.style.visibility = 'hidden';
-//   form.style.zIndex = '-1';
-
-//   setTimeout(() => {
-//     success.style.visibility = 'visible';
-//     success.style.opacity = '1';
-//     success.style.zIndex = 10;
-//   }, 1000);
-// });
-
-
-// document.getElementById("submit").addEventListener("click", function() {
-
-//   console.log('confetti clicked')
-  
-//   var duration = 3 * 1000;
-//   var animationEnd = Date.now() + duration;
-//   var defaults = { startVelocity: 20, spread: 360, ticks: 90, zIndex: 990 };
-
-//   function randomInRange(min, max) {
-//     return Math.random() * (max - min) + min;
-//   }
-
-//   var interval = setInterval(function() {
-//     var timeLeft = animationEnd - Date.now();
-
-//     if (timeLeft <= 0) {
-//       return clearInterval(interval);
-//     }
-
-//     var particleCount = 200 * (timeLeft / duration);
-//     confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
-//     confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
-//   }, 500);
-// });
-
 document.getElementById('done').addEventListener('click', () => {
   success.style.opacity = '0';
   success.style.visibility = 'hidden';
   success.style.zindex = '-1';
+});
+
+document.querySelector('.fail-close').addEventListener('click', () => {
+  const fail = document.getElementById('fail');
+
+  fail.style.opacity = '0';
+  fail.style.visibility = 'hidden';
+  fail.style.zIndex = '-1';
 });
