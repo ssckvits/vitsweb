@@ -211,7 +211,7 @@ document.querySelector('.next4').addEventListener('click', () => {
   const q4label = document.getElementById('q4label');
   const next5 = document.querySelector('.next5');
 
-  if (ans3.value.trim() === "01110 00101 10100 10111 01111 10010 01011") {
+  if (ans3.value.trim() !== "") {
     console.log('ans3 value is not empty');
 
     sq4.style.transform = 'translateX(-110vw)';
@@ -280,7 +280,7 @@ document.querySelector('.next5').addEventListener('click', () => {
   const submit = document.querySelector('.submit-btn');
   const submitInput = document.getElementById('submit');
 
-  if (ans4.value.trim() === "10100 01111 10000 01111 01100 01111 10001 11001") {
+  if (ans4.value.trim() !== "") {
     console.log('ans4 value is not empty');
 
     setTimeout(() => {
@@ -337,7 +337,7 @@ document.querySelector('.next6').addEventListener('click', () => {
   
   const ans5 = document.getElementById('Q5');
 
-  if (ans5.value.trim() === "00101 10100 01000 00101 10010 01110 00101 10100"){
+  if (ans5.value.trim() !== ""){
     const question5 = document.getElementById('question5');
     const q5label = document.getElementById('q5label');
     const submit = document.querySelector('.submit-btn');
