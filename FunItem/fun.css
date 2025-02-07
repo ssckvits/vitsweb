@@ -106,10 +106,12 @@
 footer{
     bottom: 0;
 }
-
+.next{
+    margin-top: 20px !important;
+}
 #next1{
     /* color: red; */
-    margin-top: 20px;
+    margin-top: -45px;
     border: 1px solid white;
     border-radius: 30px;
     transition: .3s ease-in-out;
@@ -281,6 +283,106 @@ footer{
     margin-left: -300px;
 }
 .next3{
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+.next4{
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#question4{
+    position: absolute;
+    top: 0;
+    margin-top: -120px;
+    /* background: red; */
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+#question4:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(90, 89, 89, 0.473);
+    padding-inline: 20px;
+}
+#question4 span{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    line-height: 50px;
+    font-weight: 400;
+    cursor: text;
+}
+#Q4{
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+#q4label{
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -200px;
+}
+#q4:focus + #q4label{
+    margin-left: -300px;
+}
+.next5{
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#question5{
+    position: absolute;
+    top: 0;
+    margin-top: -120px;
+    /* background: red; */
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+#question5:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(90, 89, 89, 0.473);
+    padding-inline: 20px;
+}
+#question5 span{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    line-height: 50px;
+    font-weight: 400;
+    cursor: text;
+}
+#Q5{
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+#q5label{
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -200px;
+}
+#q5:focus + #q5label{
+    margin-left: -300px;
+}
+.next6{
     position: absolute;
     bottom: 0;
     visibility: hidden;
@@ -558,6 +660,111 @@ footer{
     box-shadow: 0 0 10px rgb(85, 148, 230);
 }
 .fail .wrapper img{
+    position: relative;
+    height: 40px;
+    width: auto;
+    margin: 50px;
+    border-radius: 5px;
+}
+#options{
+    margin-top: 20px;
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 20vw;
+}
+
+
+.wrong{
+    position: fixed;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    background: rgba(0, 0, 0, .3);
+    margin-top: 5vh;
+    height: fit-content;
+    width: 60vw;
+    border-radius: 20px;
+    border: 2px solid rgb(85, 148, 230);
+    box-shadow: 0 0 10px rgb(85, 148, 230);
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+.wrapper{
+    /* height:100vh; */
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform: scale(2);
+    top: 0;
+    z-index: -1;
+}
+.wrong h1{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: 'eurofighter';
+    text-transform: lowercase;
+    line-height: 50px;
+}
+.wrong span{
+    font-family: 'poppins', sans-serif;
+    word-spacing: 5px;
+    letter-spacing: 3.5px;
+}
+.wrong h2{
+    display: flex;
+    flex-direction: column;
+    font-family: 'eurofighter', sans-serif;
+    /* text-transform: uppercase; */
+    letter-spacing: 3px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.wrong h2 span{
+    word-spacing: 0;
+    letter-spacing: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 30px;
+}
+.done-ctn{
+    /* background: red; */
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+#done{
+    margin: 20px;
+    font-size: 1.5rem;
+    background: #000;
+    padding: 5px;
+    padding-inline: 15px;
+    border: 2px solid rgb(85, 148, 230);
+    border-radius: 25px;
+    font-family: 'eurofighter';
+    cursor: pointer;
+    z-index: 999;
+    transition: .2s ease;
+    width: fit-content;
+}
+#done:hover{
+    color: #000;
+    background: rgb(85, 148, 230);
+    box-shadow: 0 0 10px rgb(85, 148, 230);
+}
+.wrong .wrapper img{
     position: relative;
     height: 40px;
     width: auto;

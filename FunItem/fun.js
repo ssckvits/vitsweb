@@ -61,10 +61,8 @@ document.querySelector('.next2').addEventListener('click', () => {
   const q2label = document.getElementById('q2label');
   const ans2 = document.getElementById('Q2');
   const next3 = document.querySelector('.next3');
-  const submit = document.getElementById('submit-btn');
-  const submitInput = document.getElementById('submit');
 
-  if (ans1.value.trim() !== "") {
+  if (ans1.value.trim() === "00011 01100 01111 10101 00100") {
     console.log('next2 clicked');
 
     sq2.style.transform = 'translateX(-110vw)';
@@ -124,25 +122,27 @@ document.querySelector('.next2').addEventListener('click', () => {
   } else {
     console.log('Not found');
 
-    alert('Please answer the Question');
+    const wrong = document.querySelector('.wrong');
+
+    wrong.style.visibility = 'visible';
+    wrong.style.opacity = '1';
+    wrong.style.zIndex = '10';
   }
 });
 
 
 document.querySelector('.next3').addEventListener('click', () => {
   const sq3 = document.getElementById('sq3');
-  const ans3 = document.getElementById('Q3');
+  const ans2 = document.getElementById('Q2');
   const q3label = document.getElementById('q3label');
   const question3 = document.getElementById('question3');
+  const ans3 = document.getElementById('Q3')
   const next3 = document.querySelector('.next3');
   const question2 = document.getElementById('question2');
   const q2label = document.getElementById('q2label');
-  const ans2 = document.getElementById('Q2');
   const next4 = document.querySelector('.next4');
-  const submit = document.getElementById('submit-btn');
-  const submitInput = document.getElementById('submit')
 
-  if (ans3.value.trim() !== "") {
+  if (ans2.value.trim() === "10010 01111 10101 10100 00101 10010") {
     console.log('next3 clicked');
 
     sq3.style.transform = 'translateX(-110vw)';
@@ -170,13 +170,213 @@ document.querySelector('.next3').addEventListener('click', () => {
 
     setTimeout(() => {
 
+      question3.style.visibility = 'visible';
+      question3.style.opacity = '1';
+      question3.style.zIndex = '10';
+
+      ans3.style.visibility = 'visible';
+      ans3.style.opacity = '1';
+      ans3.style.zIndex = '10';
+
+      q3label.style.visibility = 'visible';
+      q3label.style.opacity = '1';
+      q3label.style.zIndex = '10';
+      
       next4.style.visibility = 'visible';
-      next4
+      next4.style.opacity = '1';
+      next4.style.zIndex = '10';
+
     }, 1000);
   } else {
     console.log('Not found');
 
-    alert('Please answer the Question');
+    const wrong = document.querySelector('.wrong');
+
+    wrong.style.visibility = 'visible';
+    wrong.style.opacity = '1';
+    wrong.style.zIndex = '10';
+  }
+});
+
+document.querySelector('.next4').addEventListener('click', () => {
+  console.log('next4 clicked');
+
+  const question3 = document.getElementById('question3');
+  const ans3 = document.getElementById('Q3');
+  const q3label = document.getElementById('q3label');
+  const sq4 = document.getElementById('sq4');
+  const next4 = document.querySelector('.next4');
+  const question4 = document.getElementById('question4');
+  const ans4 = document.getElementById('Q4');
+  const q4label = document.getElementById('q4label');
+  const next5 = document.querySelector('.next5');
+
+  if (ans3.value.trim() === "01110 00101 10100 01000 01111 10010 10100") {
+    console.log('ans3 value is not empty');
+
+    sq4.style.transform = 'translateX(-110vw)';
+    sq4.style.width = '100vw';
+
+    setTimeout(() => {
+      console.log('timeout');
+
+      question3.style.opacity = '0';
+      question3.style.visibility = 'hidden';
+      question3.style.zIndex = '-1';
+
+      ans3.style.opacity = '0';
+      ans3.style.visibility = 'hidden';
+      ans3.style.zIndex = '-1';
+
+      q3label.style.opacity = '0';
+      q3label.style.visibility = 'hidden';
+      q3label.style.zIndex = '-1';
+
+      next4.style.opacity = '0';
+      next4.style.visibility = 'hidden';
+      next4.style.zIndex = '-1';
+    }, 20);
+
+    setTimeout(() => {
+      console.log('q5 appearing');
+
+      question4.style.visibility = 'visible';
+      question4.style.opacity = '1';
+      question4.style.zIndex = '10';
+
+      Q4.style.visibility = 'visible';
+      Q4.style.opacity = '1';
+      Q4.style.zIndex = '10';
+
+      q4label.style.visibility = 'visible';
+      q4label.style.opacity = '1';
+      q4label.style.zIndex = '10';
+
+      next5.style.visibility = 'visible';
+      next5.style.opacity = '1';
+      next5.style.zIndex = '10';
+    }, 1000);
+  } else {
+    console.log('Not found');
+
+    const wrong = document.querySelector('.wrong');
+
+    wrong.style.visibility = 'visible';
+    wrong.style.opacity = '1';
+    wrong.style.zIndex = '10';
+  }
+});
+
+document.querySelector('.next5').addEventListener('click', () => {
+  
+  const question4 = document.getElementById('question4');
+  const ans4 = document.getElementById('Q4');
+  const q4label = document.getElementById('q4label');
+  const next5 = document.querySelector('.next5');
+  const question5 = document.getElementById('question5');
+  const ans5 = document.getElementById('Q5');
+  const q5label = document.getElementById('q5label');
+  const next6 = document.querySelector('.next6');
+  const submit = document.querySelector('.submit-btn');
+  const submitInput = document.getElementById('submit');
+
+  if (ans4.value.trim() === "10100 01111 10000 01111 01100 01111 10001 11001") {
+    console.log('ans4 value is not empty');
+
+    setTimeout(() => {
+
+      question4.style.opacity = '0';
+      question4.style.visibility = 'visible';
+      question4.style.zIndex = '-1';
+
+      ans4.style.opacity = '0';
+      ans4.style.visibility = 'visible';
+      ans4.style.zIndex = '-1';
+
+      q4label.style.opacity = '0';
+      q4label.style.visibility = 'visible';
+      q4label.style.zIndex = '-1';
+      
+      next5.style.opacity = '0';
+      next5.style.visibility = 'visible';
+      next5.style.zIndex = '-1';
+      
+    }, 20);
+
+    setTimeout(() => {
+
+      question5.style.visibility = 'visible';
+      question5.style.opacity = '1';
+      question5.style.zIndex = '10';
+
+      ans5.style.visibility = 'visible';
+      ans5.style.opacity = '1';
+      ans5.style.zIndex = '10';
+
+      q5label.style.visibility = 'visible';
+      q5label.style.opacity = '1';
+      q5label.style.zIndex = '10';
+
+      next6.style.visibility = 'visible';
+      next6.style.opacity = '1';
+      next6.style.zIndex = '10';
+      
+    }, 1000);
+  } else {
+    console.log('Not found');
+
+    const wrong = document.querySelector('.wrong');
+
+    wrong.style.visibility = 'visible';
+    wrong.style.opacity = '1';
+    wrong.style.zIndex = '10';
+  }
+});
+
+document.querySelector('.next6').addEventListener('click', () => {
+  
+  const ans5 = document.getElementById('Q5');
+
+  if (ans5.value.trim() === "00101 10100 01000 00101 10010 01110 00101 10100"){
+    const question5 = document.getElementById('question5');
+    const q5label = document.getElementById('q5label');
+    const submit = document.querySelector('.submit-btn');
+    const submitInput = document.getElementById('submit');
+    const next6 = document.querySelector('.next6');
+
+    question5.style.opacity = '0';
+    question5.style.visibility = 'hidden';
+    question5.style.zIndex = '-1';
+
+    ans5.style.opacity = '0';
+    ans5.style.visibility = 'hidden';
+    ans5.style.zIndex = '-1';
+
+    q5label.style.opacity = '0';
+    q5label.style.visibility = 'hidden';
+    q5label.style.zIndex = '-1';
+
+    next6.style.opacity = '0';
+    next6.style.visibility = 'hidden';
+    next6.style.zIndex = '-1';
+
+  setTimeout(() => {
+    submit.style.visibility = 'visible';
+    submit.style.opacity = '1';
+    submit.style.zIndex = '10';
+    
+    submitInput.style.visibility = 'visible';
+    submitInput.style.opacity = '1';
+    submitInput.style.zIndex = '10';
+  }, 1000);
+  } else{
+    console.log('Not found');
+
+    const wrong = document.querySelector('.wrong');
+
+    wrong.style.visibility = 'visible';
+    wrong.style.opacity = '1';
+    wrong.style.zIndex = '10';
   }
 });
 
@@ -198,6 +398,7 @@ window.addEventListener("load", function () {
       .then((response) => {
         if (response.ok) {
           alert("Success!");
+          console.log('success!!!!')
         } else {
           alert("Error submitting form");
         }
@@ -213,12 +414,15 @@ document.getElementById('submit').addEventListener('click', (event) => {
   const sclname = document.getElementById('school-name').value.trim();
   const ans1 = document.getElementById('Q1').value.trim();
   const ans2 = document.getElementById('Q2').value.trim();
+  const ans3 = document.getElementById('Q3').value.trim();
+  const ans4 = document.getElementById('Q4').value.trim();
+  const ans5 = document.getElementById('Q5').value.trim();
   const form = document.getElementById('formId');
   const success = document.getElementById('success');
   const fail = document.getElementById('fail');
 
-  // Check if both fields are filled
-  if (sclname === "" ||ans1 === "" || ans2 === "") {
+
+  if (sclname === "" || ans1 === "" || ans2 === "" || ans3 === "" || ans4 === "" || ans5 === "") {
     console.log('submit clicked');
 
     fail.style.visibility = 'visible'
@@ -229,7 +433,7 @@ document.getElementById('submit').addEventListener('click', (event) => {
 
   console.log('confetti clicked');
 
-  // Hide the form
+
   form.style.opacity = '0';
   form.style.visibility = 'hidden';
   form.style.zIndex = '-1';
@@ -240,7 +444,7 @@ document.getElementById('submit').addEventListener('click', (event) => {
     success.style.zIndex = 10;
   }, 1000);
 
-  // Confetti animation
+
   var duration = 3 * 1000;
   var animationEnd = Date.now() + duration;
   var defaults = { startVelocity: 20, spread: 360, ticks: 90, zIndex: 990 };
@@ -266,6 +470,14 @@ document.getElementById('done').addEventListener('click', () => {
   success.style.opacity = '0';
   success.style.visibility = 'hidden';
   success.style.zindex = '-1';
+
+  setTimeout(() => {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      window.location.href = "/nexnova/nexnova-mobile.html";
+    } else {
+      window.location.href = "/nexnova/nexnova.html"; 
+    }
+  }, 1000);
 });
 
 document.querySelector('.fail-close').addEventListener('click', () => {
@@ -274,4 +486,12 @@ document.querySelector('.fail-close').addEventListener('click', () => {
   fail.style.opacity = '0';
   fail.style.visibility = 'hidden';
   fail.style.zIndex = '-1';
+});
+
+document.querySelector('.wrong-done').addEventListener('click', () => {
+  const wrongclose = document.querySelector('.wrong');
+
+  wrongclose.style.opacity = '0';
+  wrongclose.style.visibility = 'hidden';
+  wrongclose.style.zIndex = '-1';
 });
