@@ -211,7 +211,7 @@ document.querySelector('.next4').addEventListener('click', () => {
   const q4label = document.getElementById('q4label');
   const next5 = document.querySelector('.next5');
 
-  if (ans3.value.trim() === "01110 00101 10100 01000 01111 10010 10100") {
+  if (ans3.value.trim() === "01110 00101 10100 10111 01111 10010 01011") {
     console.log('ans3 value is not empty');
 
     sq4.style.transform = 'translateX(-110vw)';
