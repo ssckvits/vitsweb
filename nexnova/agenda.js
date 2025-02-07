@@ -22,5 +22,3 @@ document.querySelector('.button').addEventListener('click', () => {
         window.location.href='/nexnova/nexnova.html';
     }, 1000);
 });
-
-//
