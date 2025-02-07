@@ -942,3 +942,43 @@ img:nth-child(5) {
 .STA {
   grid-area: 3 / 2 / 4 / 3;
 } */
+
+.game{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  /* background: red; */
+}
+.game-desc{
+  display: flex;
+  width: 100vw;
+  text-align: center;
+  justify-content: center;
+  /* background: rebeccapurple; */
+}
+.game-card{
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: rgba(31, 31, 31, 0.747);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--border);
+  border-radius: 17px;
+  box-shadow:  0 0 5px 0 var(--border);
+}
+.game-card h1{
+  top: 0 !important;
+  font-family: 'eurofighter', sans-serif;
+  padding-inline: 10px;
+}
+.game-card button{
+  justify-content: center;
+  margin-top: 50px;
+}

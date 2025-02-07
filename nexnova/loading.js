@@ -99,3 +99,13 @@ document.querySelectorAll(".pop").forEach(function (element) {
     });
 });
 
+function game(){
+    const load1 = document.getElementById('load1');
+
+    load1.style.zIndex = '9999';
+    load1.style.opacity = '1';
+
+    setTimeout(() => {
+        window.location.href = '/FunItem/funitem.html'
+    }, 500);
+}

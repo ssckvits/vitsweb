@@ -48,4 +48,3 @@ const glryBtn = document.querySelector('glry-view');
 glryBtn.addEventListener('load', () => {
   glryBtn.style.zIndex = '199'
 });
-
