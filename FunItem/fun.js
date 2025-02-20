@@ -62,7 +62,7 @@ document.querySelector('.next2').addEventListener('click', () => {
   const ans2 = document.getElementById('Q2');
   const next3 = document.querySelector('.next3');
 
-  if (ans1.value.trim() === "00011 01100 01111 10101 00100") {
+  if (ans1.value.trim() !== "") {
     console.log('next2 clicked');
 
     sq2.style.transform = 'translateX(-110vw)';
@@ -142,7 +142,7 @@ document.querySelector('.next3').addEventListener('click', () => {
   const q2label = document.getElementById('q2label');
   const next4 = document.querySelector('.next4');
 
-  if (ans2.value.trim() === "10010 01111 10101 10100 00101 10010") {
+  if (ans2.value.trim() !== "") {
     console.log('next3 clicked');
 
     sq3.style.transform = 'translateX(-110vw)';
