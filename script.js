@@ -66,7 +66,7 @@ const countdownInterval = setInterval(function() {
 
   if (timeRemaining < 0) {
     clearInterval(countdownInterval);
-    document.getElementById("timer").innerHTML = "Event has started!";
+    document.getElementById("timer").innerHTML = "Event Has Ended";
   }
 
 }, 1000);
