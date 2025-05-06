@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+  
+  <title>65th Battle of Babes</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">65<sup style="font-family: 'poppins';">th</sup> Battle of Babes</h1>
+        <h3 style="color: aliceblue;">St. Sylvester's College vs Vidyartha College <span class="live-badge">LIVE</span></h3>
+      </header>
+
+        <div class="custom-shape-divider-top-1746560562">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+        </div>
+    
+      <div class="toss-info">
+        <p><strong>Toss:</strong> <span id="tossText"></span></p>
+        <p><strong>Venue:</strong> Pallekele International Cricket Stadium</p>
+      </div>
+    
+      <div class="toggle-buttons">
+        <button class="active" id="team1Button"></button>
+        
+      </div>
+    
+      <div class="scorecard">
+        <div class="match-summary">
+          <div class="summary-card" style="flex: 2; border-left: 4px solid var(--primary-color);">
+            <h4>Current Batters</h4>
+            <p id="batter1"></p>
+            <p id="batter2" style="color: #5c5c5c;"></p>
+          </div>
+          <div class="summary-card" style="flex: 1; border-left: 4px solid var(--primary-color);">
+            <h4>Bowling Now</h4>
+            <p id="bowler"></p>
+          </div>
+        </div>
+    
+        <div class="match-summary">
+          <div class="summary-card"><h4>Total Runs</h4><p id="totalRuns"></p><p><small id="overs"></small></p></div>
+          <div class="summary-card"><h4>Extras</h4><p id="extras"></p></div>
+          <div class="summary-card"><h4>Partnership</h4><p id="partnership"></p></div>
+          <div class="summary-card"><h4>Last 5 Overs</h4><p id="last5"></p></div>
+        </div>
+    
+        <!-- Dismissed Batters Table -->
+        <h3 style="text-align:center; color: aliceblue; margin-top: 40px;">Dissmissed Batters</h3>
+        <table id="dismissedBattersTable">
+          <thead>
+            <tr>
+              <th>Batter</th><th>Runs</th><th>Balls</th><th>Dismissal</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+    
+        <!-- Bowler Stats Table -->
+        <h3 style="text-align:center; color: aliceblue; margin-top: 40px;">Bowlers</h3>
+        <table id="bowlersTable">
+          <thead>
+            <tr>
+              <th>Bowler</th><th>Overs</th><th>Maidens</th><th>Runs</th><th>Wickets</th><th>Economy</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    
+      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+      <script src="script.js"></script>
+
+      <footer id="footer">
+        <div class="or" id="ordiv">
+          <hr class="line no-right">
+          <span class="ftr-title">&#9675; VITS &#9675;</span>
+          <hr class="line no-left">
+        </div>
+        <div class="footer-ctn">
+          <div class="rights">
+            <span>&#169; 2024 VITS &nbsp;|&nbsp; All Rights Reserved &nbsp;|&nbsp; St. Sylvester's College Kandy</span>
+          </div>
+          <div class="social">
+            <i class='bx bxl-facebook' onclick="window.location.href=''"><span>Facebook</span></i>
+            <i class='bx bxl-instagram' onclick="window.location.href=''"><span>Instagram</span></i>
+            <i class='bx bxl-youtube' onclick="window.location.href=''"><span>Youtube</span></i>
+            <i class='bx bx-globe' onclick="window.location.href=''"><span>vits.lk</span></i>
+          </div>
+          <div class="other">
+            <i onclick="window.location.href='about.html'">ABOUT</i>
+            <i onclick="window.location.href='about.html#contact'">CONTACT</i>
+            <i onclick="window.location.href=''">RESOURCES</i>
+            <i onclick="window.location.href=''">TERMS OF SERVICE</i>
+            <i onclick="window.location.href=''">Shool Website</i>
+          </div>
+        </div>
+      </footer>
+      
+    </body>
+    </html>
