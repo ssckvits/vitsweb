@@ -92,7 +92,7 @@ document.getElementById("button").addEventListener("click", function () {
     const fail = document.getElementById("fail");
     const success = document.getElementById("success");
 
-    if (username.value === "Admin" && password.value === "Password") {
+    if (username.value === "6969" && password.value === "guesswhat?") {
         success.style.visibility = "visible";
         success.style.opacity = "1";
 
