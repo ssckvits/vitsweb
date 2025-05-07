@@ -99,6 +99,7 @@ document.getElementById("button").addEventListener("click", function () {
         setTimeout(() => {
             login.style.opacity = "0";
             login.style.visibility = "hidden";
+            login.style.display = "none";
         }, timeout = 2000);
     }else{
         fail.style.visibility = "visible";
@@ -113,3 +114,4 @@ document.getElementById("done").addEventListener("click", function () {
     fail.style.visibility = "hidden";
     fail.style.opacity = "0";
 });
+

@@ -82,3 +82,4 @@ document.querySelectorAll(".nexnova-btn").forEach((btn) => {
     }
   });
 });
+

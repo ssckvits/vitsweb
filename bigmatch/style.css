@@ -225,6 +225,31 @@ table tr:last-child td {
     flex: 1 1 100%;
   }
 }
+@media (max-width: 400px) {
+  .toss-info{
+    transform: scale(0.9);
+    align-self: center;
+    margin-left: -5px;
+  }
+  #bowlersTable{
+    transform: scale(.9);
+    margin: 0;
+    padding: 0;
+    left: 0;
+    margin-left: -13px;
+  }
+  .social>i>span{
+    visibility: hidden;
+  }
+  .other{
+    display: inline;
+    justify-content: space-between;
+  }
+  #schlweb{
+    visibility: hidden;
+    display: none;
+  }
+}
 
 * {
   border: none;
