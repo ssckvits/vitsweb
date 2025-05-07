@@ -49,14 +49,13 @@ function updateScore() {
   const bowlers = [];
   bowlerInputs.forEach(group => {
     const inputs = group.querySelectorAll('input');
-    const [name, overs, maidens, runs, wickets, economy] = Array.from(inputs).map(i => i.value.trim());
+    const [name, overs, maidens, runs, wickets] = Array.from(inputs).map(i => i.value.trim());
     if (name) bowlers.push({
       name,
       overs: Number(overs),
       maidens: Number(maidens),
       runs: Number(runs),
       wickets: Number(wickets),
-      economy: Number(economy)
     });
   });
 
@@ -77,6 +76,7 @@ function updateScore() {
     alert("Updated successfully!");
   }).catch((err) => {
     alert("Error: " + err.message);
+    console.error(err);
   });
 }
 

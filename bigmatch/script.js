@@ -64,7 +64,7 @@ db.ref("match").on("value", (snapshot) => {
   const bowlersTable = document.querySelector("#bowlersTable tbody");
   bowlersTable.innerHTML = "";
   (data.bowlers || []).forEach(b => {
-    const row = `<tr><td>${b.name}</td><td>${b.overs}</td><td>${b.maidens}</td><td>${b.runs}</td><td>${b.wickets}</td><td>${b.economy}</td></tr>`;
+    const row = `<tr><td>${b.name}</td><td>${b.overs}</td><td>${b.maidens}</td><td>${b.runs}</td><td>${b.wickets}</td></tr>`;
     bowlersTable.innerHTML += row;
   });
 });
