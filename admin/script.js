@@ -70,7 +70,10 @@ function addBowlerRow() {
 }
 
 // Fetch data on page load
-window.onload = fetchData;
+// window.onload = fetchData;
+
+window.addEventListener("load", fetchData);
+
 
 function addDismissedRow() {
   const div = document.createElement('div');
