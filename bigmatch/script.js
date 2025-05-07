@@ -41,7 +41,8 @@ const db = firebase.database();
 db.ref("match").on("value", (snapshot) => {
   const data = snapshot.val();
   if (!data) return;
-  document.getElementById("team1Button").textContent = data.team1Name || 'St. Sylvester\'s';
+  document.getElementById("inningsStatus").textContent = data.inningsStatus || '';
+  document.getElementById("team1Button").textContent = data.team1Name || 'St. Sylvester\'s College\'s';
   document.getElementById("tossText").textContent = data.toss || '';
   document.getElementById("batter1").textContent = data.batter1 || '';
   document.getElementById("batter2").textContent = data.batter2 || '';
@@ -51,6 +52,9 @@ db.ref("match").on("value", (snapshot) => {
   document.getElementById("extras").textContent = data.extras || '';
   document.getElementById("partnership").textContent = data.partnership || '';
   document.getElementById("last5").textContent = data.last5 || '';
+  document.getElementById("firstInningsSummary").textContent = data.firstInningsSummary || '';
+  document.getElementById("secondInningsSummary").textContent = data.secondInningsSummary || '';
+  document.getElementById("interval").textContent = data.interval || '';
 
   // Dismissed Batters Table
   const dismissedTable = document.querySelector("#dismissedBattersTable tbody");

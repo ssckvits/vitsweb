@@ -60,6 +60,7 @@ function updateScore() {
   });
 
   db.ref("match").set({
+    inningsStatus: document.getElementById('inningsStatus').value,
     team1Name: document.getElementById('team1Name').value,
     toss: document.getElementById('toss').value,
     batter1: document.getElementById('batter1').value,
@@ -70,6 +71,9 @@ function updateScore() {
     extras: document.getElementById('extras').value,
     partnership: document.getElementById('partnership').value,
     last5: document.getElementById('last5').value,
+    firstInningsSummary: document.getElementById("firstInningsSummary").value,
+    secondInningsSummary: document.getElementById("secondInningsSummary").value,
+    interval: document.getElementById('interval').value,
     dismissedBatters: dismissed,
     bowlers: bowlers
   }).then(() => {
@@ -79,7 +83,6 @@ function updateScore() {
     console.error(err);
   });
 }
-
 
 const username = document.getElementById("username");
 const password = document.getElementById("password");

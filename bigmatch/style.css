@@ -8,12 +8,30 @@
   --highlight-color: #ffffffdc;
   --border-color: black;
 }
+body{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  overflow-x: hidden;
+}
+*{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  display: none;
+}
 
 @font-face {
   font-family: 'mechfire';
   src: url(/Font/Mechfire.otf);
 }
-
 .custom-shape-divider-top-1746560562 {
   position: relative;
   /* top: 10px; */
@@ -96,7 +114,7 @@ header h3 {
 
 .toss-info {
   background-color: var(--highlight-color);
-  margin: 20px auto;
+  margin: auto;
   padding: 15px;
   width: 90%;
   max-width: 600px;
@@ -127,7 +145,7 @@ header h3 {
   transition: background-color 0.3s ease, transform 0.3s ease;
   border-radius: 25px;
   flex: 1 1 auto;
-  max-width: 200px;
+  max-width: fit-content;
 }
 
 .toggle-buttons button.active {
@@ -352,4 +370,36 @@ footer {
   font-style: normal;
   font-size: 15px;
   cursor: pointer;
+}
+
+.innings-highlight {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007BFF;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  display: inline-block;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  animation: glow 1.8s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 8px #007BFF;
+  }
+
+  50% {
+    box-shadow: 0 0 18px #3399ff;
+  }
+
+  100% {
+    box-shadow: 0 0 8px #007BFF;
+  }
+}
+
+#allSummary{
+  width: 90%;
+  justify-self: center;
 }

@@ -80,6 +80,7 @@
   
   
   <h2>Update Match Info</h2>
+  <input type="text" id="inningsStatus" placeholder="Innings Status (e.g., 1st Innings)">
   <input type="text" id="team1Name" placeholder="Team 1 Name">
   <input type="text" id="toss" placeholder="Toss Result">
   <input type="text" id="batter1" placeholder="Batter 1">
@@ -120,6 +121,11 @@
     </div>
     <button onclick="addBowlerRow()">+ Add Bowler</button>
   </div>
+
+  <h3 style="margin-top: 30px;">Innings Summary Update</h3>
+  <input type="text" id="interval" placeholder="E.g. Lunch Break, Innings Break">
+  <input type="text" id="firstInningsSummary" placeholder="1st Innings Summary (e.g., SSC - 212/9 in 50 Overs)">
+  <input type="text" id="secondInningsSummary" placeholder="2nd Innings Summary (e.g., VC - 185 all out in 47.3 Overs)">
 
   <button onclick="updateScore()" id="update-score">Update Score</button>
 
