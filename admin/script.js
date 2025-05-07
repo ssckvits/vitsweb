@@ -36,6 +36,35 @@ function addBowlerRow() {
   document.getElementById('bowlersContainer').appendChild(div);
 }
 
+// Fetch data on page load
+window.onload = fetchData;
+
+function addDismissedRow() {
+  const div = document.createElement('div');
+  div.className = 'row-group';
+  div.innerHTML = `
+      <input type="text" placeholder="Name">
+      <input type="number" placeholder="Runs">
+      <input type="number" placeholder="Balls">
+      <input type="text" placeholder="Dismissal">
+    `;
+  document.getElementById('dismissedContainer').appendChild(div);
+}
+
+function addBowlerRow() {
+  const div = document.createElement('div');
+  div.className = 'row-group';
+  div.innerHTML = `
+      <input type="text" placeholder="Name">
+      <input type="number" placeholder="Overs">
+      <input type="number" placeholder="Maidens">
+      <input type="number" placeholder="Runs">
+      <input type="number" placeholder="Wickets">
+      <input type="number" step="0.01" placeholder="Economy">
+    `;
+  document.getElementById('bowlersContainer').appendChild(div);
+}
+
 function updateScore() {
   const dismissedInputs = document.querySelectorAll('#dismissedContainer .row-group');
   const dismissed = [];
@@ -89,31 +118,31 @@ const password = document.getElementById("password");
 const login = document.getElementById("login-sec");
 
 document.getElementById("button").addEventListener("click", function () {
-    event.preventDefault();
+  event.preventDefault();
 
-    const fail = document.getElementById("fail");
-    const success = document.getElementById("success");
+  const fail = document.getElementById("fail");
+  const success = document.getElementById("success");
 
-    if (username.value === "6969" && password.value === "guesswhat?") {
-        success.style.visibility = "visible";
-        success.style.opacity = "1";
+  if (username.value === "6969" && password.value === "guesswhat?") {
+    success.style.visibility = "visible";
+    success.style.opacity = "1";
 
-        setTimeout(() => {
-            login.style.opacity = "0";
-            login.style.visibility = "hidden";
-            login.style.display = "none";
-        }, timeout = 2000);
-    }else{
-        fail.style.visibility = "visible";
-        fail.style.opacity = "1";
-    }
+    setTimeout(() => {
+      login.style.opacity = "0";
+      login.style.visibility = "hidden";
+      login.style.display = "none";
+    }, timeout = 2000);
+  } else {
+    fail.style.visibility = "visible";
+    fail.style.opacity = "1";
+  }
 });
 
 const close = document.getElementById("done");
 
 document.getElementById("done").addEventListener("click", function () {
-    
-    fail.style.visibility = "hidden";
-    fail.style.opacity = "0";
+
+  fail.style.visibility = "hidden";
+  fail.style.opacity = "0";
 });
 

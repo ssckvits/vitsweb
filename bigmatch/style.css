@@ -317,6 +317,8 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
+  text-align: center;
+  align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
   font-family: monospace;
@@ -400,6 +402,13 @@ footer {
 }
 
 #allSummary{
+  max-width: 100%;
+  justify-self: center;
+}
+.ninetypercenter{
+  display: flex;
+  flex-direction: column;
+  /* background: red; */
   width: 90%;
   justify-self: center;
 }
