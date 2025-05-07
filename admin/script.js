@@ -32,7 +32,6 @@ function addBowlerRow() {
     <input type="number" placeholder="Maidens">
     <input type="number" placeholder="Runs">
     <input type="number" placeholder="Wickets">
-    <input type="number" step="0.01" placeholder="Economy">
   `;
   document.getElementById('bowlersContainer').appendChild(div);
 }
