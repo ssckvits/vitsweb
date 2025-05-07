@@ -856,3 +856,25 @@ h3 {
     padding: 0 10px;
     color: #ffffff;
 }
+
+.live{
+    display: flex;
+    position: absolute;
+    height: 5px;
+    width: 5px; 
+    margin-top: -2px;
+    background: red;
+    border-radius: 100%;
+    animation: dim .8s infinite;
+}
+@keyframes dim {
+    0% {
+        opacity: .5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+    }
+}

@@ -48,7 +48,7 @@ function nexnovaSoon(){
 // });
 
 
-const eventDate = new Date("Feb 07, 2025 09:00:00").getTime();
+const eventDate = new Date("May 09, 2025 09:00:00").getTime();
 
 const countdownInterval = setInterval(function() {
   
@@ -66,7 +66,7 @@ const countdownInterval = setInterval(function() {
 
   if (timeRemaining < 0) {
     clearInterval(countdownInterval);
-    document.getElementById("timer").innerHTML = "Event Has Ended";
+    document.getElementById("timer").innerHTML = "Event Has Started";
   }
 
 }, 1000);
@@ -76,9 +76,9 @@ document.querySelectorAll(".nexnova-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
 
     if (window.matchMedia("(max-width: 768px)").matches) {
-      window.location.href = "nexnova/nexnova-mobile.html";
+      window.location.href = "/bigmatch/";
     } else {
-      window.location.href = "nexnova/nexnova.html"; 
+      window.location.href = "/bigmatch/"; 
     }
   });
 });
