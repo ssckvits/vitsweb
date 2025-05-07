@@ -70,7 +70,7 @@ function addBowlerRow() {
 }
 
 // Fetch data on page load
-// window.onload = fetchData;
+window.onload = fetchData;
 
 window.addEventListener("load", fetchData);
 
