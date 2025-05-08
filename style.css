@@ -856,7 +856,22 @@ h3 {
     padding: 0 10px;
     color: #ffffff;
 }
-
+.special{
+    transition: .3s ease-in-out;
+    animation: special 1s ease-in-out infinite;
+}
+@keyframes special {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+        color: red;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 .live{
     display: flex;
     position: absolute;
