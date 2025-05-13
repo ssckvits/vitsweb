@@ -1,97 +1,127 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const elements = document.querySelectorAll('.hidden');
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.0000001
-  };
-
-  const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const delay = Array.from(elements).indexOf(entry.target) * 50;
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-          entry.target.classList.remove('hidden');
-        }, delay);
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-  elements.forEach(element => observer.observe(element));
-});
-
 const firebaseConfig = {
-  apiKey: "AIzaSyBiC2zD1pRdMT13EnRjUmCxv_ArBDJRM2s",
-  authDomain: "big-match-live.firebaseapp.com",
-  databaseURL: "https://big-match-live-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "big-match-live",
-  storageBucket: "big-match-live.appspot.com",
-  messagingSenderId: "1020321899771",
-  appId: "1:1020321899771:web:2622d39926654dceec7c5e"
-};
+            apiKey: "AIzaSyCmiP5PvgGnYbCJ8UGXf9OJwTlbaOQW6TE",
+            authDomain: "livecricketscoree-b6a55.firebaseapp.com",
+            databaseURL: "https://livecricketscoree-b6a55-default-rtdb.firebaseio.com",
+            projectId: "livecricketscoree-b6a55",
+            storageBucket: "livecricketscoree-b6a55.firebasestorage.app",
+            messagingSenderId: "688421882959",
+            appId: "1:688421882959:web:25fdd0cf8bd15a61a2ee3a"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+        // Voting function
+        function voteTeam(team) {
+            const teamRef = db.ref('pollVotes/' + team);
+            teamRef.transaction((currentVotes) => {
+                return (currentVotes || 0) + 1;
+            });
+        }
 
-db.ref("match").on("value", (snapshot) => {
-  const data = snapshot.val();
-  if (!data) return;
-  document.getElementById("inningsStatus").textContent = data.inningsStatus || '';
-  document.getElementById("team1Button").textContent = data.team1Name || 'St. Sylvester\'s College\'s';
-  document.getElementById("tossText").textContent = data.toss || '';
-  document.getElementById("batter1").textContent = data.batter1 || '';
-  document.getElementById("batter2").textContent = data.batter2 || '';
-  document.getElementById("bowler").textContent = data.bowler || '';
-  document.getElementById("totalRuns").textContent = data.totalRuns || '';
-  document.getElementById("overs").textContent = data.overs || '';
-  document.getElementById("extras").textContent = data.extras || '';
-  document.getElementById("partnership").textContent = data.partnership || '';
-  document.getElementById("last5").textContent = data.last5 || '';
-  document.getElementById("firstInningsSummary").textContent = data.firstInningsSummary || '';
-  document.getElementById("secondInningsSummary").textContent = data.secondInningsSummary || '';
-  document.getElementById("interval").textContent = data.interval || '';
+        // Real-time poll result updates
+        const pollRef = db.ref('pollVotes');
+        pollRef.on('value', (snapshot) => {
+            const data = snapshot.val() || { SSC: 0, VC: 0 };
+            document.getElementById('votesSSC').textContent = data.SSC;
+            document.getElementById('votesVC').textContent = data.VC;
 
-  // Dismissed Batters Table
-  const dismissedTable = document.querySelector("#dismissedBattersTable tbody");
-  dismissedTable.innerHTML = "";
-  (data.dismissedBatters || []).forEach(b => {
-    const row = `<tr><td>${b.name}</td><td>${b.runs}</td><td>${b.balls}</td><td>${b.dismissal}</td></tr>`;
-    dismissedTable.innerHTML += row;
-  });
+            const total = data.SSC + data.VC;
+            const percentSSC = total ? ((data.SSC / total) * 100).toFixed(1) : 0;
+            const percentVC = total ? ((data.VC / total) * 100).toFixed(1) : 0;
 
-  // Bowlers Table
-  const bowlersTable = document.querySelector("#bowlersTable tbody");
-  bowlersTable.innerHTML = "";
-  (data.bowlers || []).forEach(b => {
-    const row = `<tr><td>${b.name}</td><td>${b.overs}</td><td>${b.maidens}</td><td>${b.runs}</td><td>${b.wickets}</td></tr>`;
-    bowlersTable.innerHTML += row;
-  });
-});
+            document.getElementById('percentSSC').style.width = percentSSC + '%';
+            document.getElementById('percentSSC').textContent = percentSSC + '%';
+            document.getElementById('percentVC').style.width = percentVC + '%';
+            document.getElementById('percentVC').textContent = percentVC + '%';
+        });
 
-function facebook() {
-  window.open("https://www.facebook.com/share/1GAWtrX8tL/", "_blank");
-}
+        db.ref("match").on("value", (snapshot) => {
+            const data = snapshot.val();
+            if (!data) return;
 
-function instagram() {
-  window.open("https://www.instagram.com/ssckict?igsh=MXBrejF1NDBlcDZzdA==", "_blank");
-}
+            // Update basic match info
+            document.getElementById("inningsStatus").textContent = data.inningsStatus || '';
+            document.getElementById("tossText").textContent = data.toss || '';
+            document.getElementById("GroundName").textContent = data.GroundName || '';
+            document.getElementById("teamName").textContent = data.team1Name || 'St. Sylvester\'s'; // Corrected ID
+            document.getElementById("team1Runs").textContent = data.team1Runs || '0/0';
+            document.getElementById("team1Overs").textContent = `(${data.team1Overs || '0.0'} overs)`;
+            document.getElementById("umpireName").textContent = data.umpireName || '';
+            document.getElementById("matchDate").textContent = data.matchDate || '';
 
-function youtube() {
-  window.open("https://youtube.com/@vestersict?si=r7SCMfCdUJ26iOat", "_blank");
-}
+            // Update batter information
+            document.getElementById("batter1Name").textContent = data.batter1Name || '';
+            document.getElementById("batter1Runs").textContent = data.batter1Runs || '0';
+            document.getElementById("batter1Balls").textContent = `${data.batter1Balls || '0'} balls`;
+            document.getElementById("batter1four").textContent = `${data.batter1four || '0'} Four`;
+            document.getElementById("batter1six").textContent = `${data.batter1six || '0'} Six`;
 
-function about() {
-  window.open("https://vits.lk/about.html", "_blank");
-}
+            document.getElementById("batter2Name").textContent = data.batter2Name || '';
+            document.getElementById("batter2Runs").textContent = data.batter2Runs || '0';
+            document.getElementById("batter2Balls").textContent = `${data.batter2Balls || '0'} balls`;
+            document.getElementById("batter2four").textContent = `${data.batter2four || '0'} Four`;
+            document.getElementById("batter2six").textContent = `${data.batter2six || '0'} Six`;
 
-function contact() {
-  window.open("https://vits.lk/about.html#contact", "_blank");
-}
-function vits() {
-  window.open("https://vits.lk/", "_blank");
-}
+            // Update bowler information
+            document.getElementById("bowlerName").textContent = data.bowlerName || '';
+            document.getElementById("bowlerOvers").textContent = data.bowlerOvers || '0.0';
+            document.getElementById("bowlerMaidens").textContent = data.bowlerMaidens || '0';
+            document.getElementById("bowlerRuns").textContent = data.bowlerRuns || '0';
+            document.getElementById("bowlerWickets").textContent = data.bowlerWickets || '0';
+            document.getElementById("bowlerEconomy").textContent = data.bowlerEconomy || '0.00';
+
+            // Update match stats
+            document.getElementById("partnership").textContent = data.partnership || '0';
+            document.getElementById("last5").textContent = data.last5 || '0';
+            document.getElementById("extras").textContent = data.extras || '0';
+            document.getElementById("runRate").textContent = data.runRate || '0.00';
+            document.getElementById("requiredRate").textContent = data.requiredRate || '0.00';
+            document.getElementById("projectedScore").textContent = data.projectedScore || '-';
+
+            // Update summary cards
+            document.getElementById("matchSituation").textContent = data.matchSituation || '';
+            document.getElementById("keyMoment").textContent = data.keyMoment || '';
+            document.getElementById("bestBatsman").textContent = data.bestBatsman || '';
+            document.getElementById("bestBowler").textContent = data.bestBowler || '';
+
+            // Update dismissed batters table
+            const dismissedTable = document.querySelector("#dismissedBattersTable tbody");
+            dismissedTable.innerHTML = "";
+            (data.dismissedBatters || []).forEach(b => {
+                const row = `<tr>
+                    <td>${b.name || ''}</td>
+                    <td>${b.runs || '0'}</td>
+                    <td>${b.balls || '0'}</td>
+                    <td>${b.fours || '0'}</td>
+                    <td>${b.sixes || '0'}</td>
+                    <td>${b.sr || '0'}</td>
+                    <td>${b.dismissal || ''}</td>
+                </tr>`;
+                dismissedTable.innerHTML += row;
+            });
+
+            // Update bowlers table
+            const bowlersTable = document.querySelector("#bowlersTable tbody");
+            bowlersTable.innerHTML = "";
+            (data.bowlers || []).forEach(b => {
+                const row = `<tr>
+                    <td>${b.name || ''}</td>
+                    <td>${b.overs || '0.0'}</td>
+                    <td>${b.maidens || '0'}</td>
+                    <td>${b.runs || '0'}</td>
+                    <td>${b.wickets || '0'}</td>
+                    <td>${b.economy || '0.00'}</td>
+                    <td>${b.dotBalls || '0'}</td>
+                    <td>${b.foursConceded || '0'}</td>
+                    <td>${b.sixesConceded || '0'}</td>
+                </tr>`;
+                bowlersTable.innerHTML += row;
+            });
+        });
+
+        // Add theme toggle functionality
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        }

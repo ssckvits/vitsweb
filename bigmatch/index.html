@@ -2,178 +2,223 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 
-  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <title>36th Battle of Babes - ODI Match</title>
 
-  <title>Battle of Babes | Live Score</title>
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/nexnova/load1.css">
-  <link rel="stylesheet" href="/nexnova/footer.css">
-
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-  <script src="/nexnova/loading.js" defer></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="St._Sylvester's_College.png" alt="St. Sylvester's College Logo" class="team-logo">
+                <span class="vs-text">VS</span>
+                <img src="Vidyartha_college_kandy_logo.png" alt="Vidyartha College Logo" class="team-logo">
+            </div>
+            <h1>36th One Day Encounter.</h1>
+            <div class="match-title">SSCK vs VCK<span class="live-badge">LIVE</span></div>
+            <div id="inningsStatus" class="innings-status"></div>
+        </div>
+    </header>
 
-  <div id="wifi-loader">
-    <svg class="circle-outer" viewBox="0 0 86 86">
-      <circle class="back" cx="43" cy="43" r="40"></circle>
-      <circle class="front" cx="43" cy="43" r="40"></circle>
-      <circle class="new" cx="43" cy="43" r="40"></circle>
-    </svg>
-    <svg class="circle-middle" viewBox="0 0 60 60">
-      <circle class="back" cx="30" cy="30" r="27"></circle>
-      <circle class="front" cx="30" cy="30" r="27"></circle>
-    </svg>
-    <svg class="circle-inner" viewBox="0 0 34 34">
-      <circle class="back" cx="17" cy="17" r="14"></circle>
-      <circle class="front" cx="17" cy="17" r="14"></circle>
-    </svg>
-    <div class="text" data-text="Loading Content... Please Wait..."></div>
-  </div>
+    <div class="container">
+        <!-- Match Info Cards -->
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Toss</h3>
+                <p id="tossText"></p>
+            </div>
+            <div class="info-card">
+                <h3>Venue</h3>
+                <p id="GroundName"></p>
+            </div>
+            <div class="info-card">
+                <h3>Match Date</h3>
+                <p id="matchDate"></p>
+            </div>
+            <div class="info-card">
+                <h3>Umpires</h3>
+                <p id="umpireName"></p>
+            </div>
+        </div>
 
-  <header>
-    <h1 style="color: white;">65<sup style="font-family: 'poppins';">th</sup> Battle of Babes</h1>
-    <h3 style="color: aliceblue;">St. Sylvester's College vs Vidyartha College</h3>
-    <p id="inningsStatus" class="innings-highlight"></p>
-  </header>
+        <!-- Team 1 Scorecard -->
+        <div class="scorecard-section">
+            <h2 class="section-title">Batting Team</h2>
+            <div class="team-scorecard">
+                <div class="team-header">
+                    <div class="team-name" id="teamName"></div>
+                    <div class="team-score" id="team1Runs"></div>
+                </div>
+                <div class="team-overs" id="team1Overs"></div>
 
-  <div class="custom-shape-divider-top-1746560562">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path
-        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-        class="shape-fill"></path>
-    </svg>
-  </div>
+                <div class="player-cards">
+                    <!-- Current Batters -->
+                    <div class="player-card batter-card">
+                        <div class="player-name" id="batter1Name"></div>
+                        <div class="player-runs" id="batter1Runs"></div>
+                        <div class="player-stats">
+                            <span class="stat-item" id="batter1Balls"></span>
+                            <span class="stat-item" id="batter1four"></span>
+                            <span class="stat-item" id="batter1six"></span>
+                        </div>
+                    </div>
 
-  <div class="toss-info">
-    <p><strong>Toss:</strong> <span id="tossText"></span></p>
-    <p><strong>Venue:</strong> Pallekele International Cricket Stadium</p>
-  </div>
+                    <div class="player-card batter-card">
+                        <div class="player-name" id="batter2Name"></div>
+                        <div class="player-runs" id="batter2Runs"></div>
+                        <div class="player-stats">
+                            <span class="stat-item" id="batter2Balls"></span>
+                            <span class="stat-item" id="batter2four"></span>
+                            <span class="stat-item" id="batter2six"></span>
+                        </div>
+                    </div>
 
-  <div class="toggle-buttons">
-    <button class="active" id="team1Button"></button>
+                    <!-- Current Bowler -->
+                    <div class="player-card bowler-card">
+                        <div class="player-name" id="bowlerName"></div>
+                        <div class="player-stats">
+                            <span class="stat-item"><strong id="bowlerOvers"></strong> overs</span>
+                            <span class="stat-item"><strong id="bowlerMaidens"></strong> maidens</span>
+                            <span class="stat-item"><strong id="bowlerRuns"></strong> runs</span>
+                            <span class="stat-item"><strong id="bowlerWickets"></strong> wickets</span>
+                            <span class="stat-item"><strong id="bowlerEconomy"></strong> economy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  </div>
+        <!-- Key Match Stats -->
+        <h2 class="section-title">Match Statistics</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Partnership</h3>
+                <p id="partnership"></p>
+            </div>
+            <div class="stat-card">
+                <h3>Last 5 overs</h3>
+                <p id="last5"></p>
+            </div>
+            <div class="stat-card">
+                <h3>Extras</h3>
+                <p id="extras"></p>
+            </div>
+            <div class="stat-card highlight-card">
+                <h3>Current Run Rate</h3>
+                <p id="runRate"></p>
+            </div>
+            <div class="stat-card">
+                <h3>Projected Score</h3>
+                <p id="projectedScore"></p>
+            </div>
+            <div class="stat-card highlight- card">
+                <h3>Required Run Rate</h3>
+                <p id="requiredRate"></p>
+            </div>
+        </div>
 
-  <div class="scorecard">
-    <div class="match-summary">
-      <div class="summary-card" style="flex: 2; border-left: 4px solid var(--primary-color);">
-        <h4>Current Batters</h4>
-        <p id="batter1"></p>
-        <p id="batter2" style="color: #5c5c5c;"></p>
-      </div>
-      <div class="summary-card" style="flex: 1; border-left: 4px solid var(--primary-color);">
-        <h4>Bowling Now</h4>
-        <p id="bowler"></p>
-      </div>
+        <!-- Live Poll Section -->
+        <div class="poll-section">
+            <h2 class="poll-title">🏏 Who will win this match?</h2>
+            <div class="poll-buttons">
+                <button class="poll-btn poll-btn-ssc" onclick="voteTeam('SSC')">Vote SSCK</button>
+                <button class="poll-btn poll-btn-vc" onclick="voteTeam('VC')">Vote VCK</button>
+            </div>
+            <div class="poll-result">
+                <div class="poll-label">
+                    <span class="poll-team">St. Sylvester's College</span>
+                    <span class="poll-count"><span id="votesSSC">0</span> votes</span>
+                </div>
+                <div class="poll-bar">
+                    <div class="poll-fill" id="percentSSC">0%</div>
+                </div>
+
+                <div class="poll-label">
+                    <span class="poll-team">Vidyartha College</span>
+                    <span class="poll-count"><span id="votesVC">0</span> votes</span>
+                </div>
+                <div class="poll-bar">
+                    <div class="poll-fill poll-fill-vc" id="percentVC">0%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dismissed Batters Table -->
+        <h2 class="section-title">Dismissed Batters</h2>
+        <div class="table-container">
+            <table id="dismissedBattersTable">
+                <thead>
+                    <tr>
+                        <th>Batter</th>
+                        <th>Runs</th>
+                        <th>Balls</th>
+                        <th>4s</th>
+                        <th>6s</th>
+                        <th>SR</th>
+                        <th>Dismissal</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Bowling Card Table -->
+        <h2 class="section-title">Bowling Card</h2>
+        <div class="table-container">
+            <table id="bowlersTable">
+                <thead>
+                    <tr>
+                        <th>Bowler</th>
+                        <th>Overs</th>
+                        <th>Maidens</th>
+                        <th>Runs</th>
+                        <th>Wickets</th>
+                        <th>Economy</th>
+                        <th>0s</th>
+                        <th>4s</th>
+                        <th>6s</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Innings Summary Cards -->
+        <h2 class="section-title">Match Summary</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Match Situation</h3>
+                <p id="matchSituation"></p>
+            </div>
+            <div class="info-card">
+                <h3>KEY MOMENT</h3>
+                <p id="keyMoment"></p>
+            </div>
+            <div class="info-card">
+                <h3>BEST BATSMAN</h3>
+                <p id="bestBatsman"></p>
+            </div>
+            <div class="info-card">
+                <h3>BEST BOWLER</h3>
+                <p id="bestBowler"></p>
+            </div>
+        </div>
     </div>
 
-    <div class="match-summary">
-      <div class="summary-card">
-        <h4>Total Runs</h4>
-        <p id="totalRuns"></p>
-        <p><small id="overs"></small></p>
-      </div>
-      <div class="summary-card">
-        <h4>Extras</h4>
-        <p id="extras"></p>
-      </div>
-      <div class="summary-card">
-        <h4>Partnership</h4>
-        <p id="partnership"></p>
-      </div>
-      <div class="summary-card">
-        <h4>Last 5 Overs</h4>
-        <p id="last5"></p>
-      </div>
-    </div>
-
-    <!-- Dismissed Batters Table -->
-    <h3 style="text-align:center; color: aliceblue; margin-top: 40px;">Dissmissed Batters</h3>
-    <table id="dismissedBattersTable">
-      <thead>
-        <tr>
-          <th>Batter</th>
-          <th>Runs</th>
-          <th>Balls</th>
-          <th>Dismissal</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
-    <!-- Bowler Stats Table -->
-    <h3 style="text-align:center; color: aliceblue; margin-top: 40px;">Bowlers</h3>
-    <table id="bowlersTable">
-      <thead>
-        <tr>
-          <th>Bowler</th>
-          <th>Overs</th>
-          <th>Maidens</th>
-          <th>Runs</th>
-          <th>Wickets</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <h3 style="text-align:center; color: aliceblue; margin: 40px;">Innings Summaries</h3>
-
-  <div class="ninetypercenter">
-    <div class="summary-card" id="allSummary">
-      <h4>Interval</h4>
-      <p id="interval"></p>
-    </div>
-    <div class="match-summary" id="allSummary">
-      <div class="summary-card" style="flex: 1 1 45%; border-left: 4px solid var(--primary-color);">
-        <h4>1st Innings Summary</h4>
-        <p id="firstInningsSummary"></p>
-      </div>
-      <div class="summary-card" style="flex: 1 1 45%; border-left: 4px solid var(--primary-color);">
-        <h4>Match Summary</h4>
-        <p id="secondInningsSummary"></p>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-  <script src="script.js"></script>
-
-  <footer id="footer">
-    <div class="or" id="ordiv">
-      <hr class="line no-right">
-      <span class="ftr-title">&#9675; VITS &#9675;</span>
-      <hr class="line no-left">
-    </div>
-    <div class="footer-ctn">
-      <div class="rights">
-        <span>&#169; 2024 VITS &nbsp;|&nbsp; All Rights Reserved &nbsp;|&nbsp; St. Sylvester's College Kandy</span>
-      </div>
-      <div class="social">
-        <i class='bx bxl-facebook' onclick="facebook()"><span>Facebook</span></i>
-        <i class='bx bxl-instagram' onclick="instagram()"><span>Instagram</span></i>
-        <i class='bx bxl-youtube' onclick="youtube()"><span>Youtube</span></i>
-        <i class='bx bx-globe' onclick="vits()"><span>vits.lk</span></i>
-      </div>
-      <div class="other">
-        <i onclick="about()">ABOUT</i>
-        <i onclick="contact()">CONTACT</i>
-        <!-- <i onclick="window.location.href=''">RESOURCES</i> -->
-        <!-- <i onclick="window.location.href=''">TERMS OF SERVICE</i> -->
-        <i onclick="window.location.href='stsylvesterscollege.lk'" id="schlweb">Shool Website</i>
-      </div>
-    </div>
-  </footer>
-
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
 </body>
 
 </html>
