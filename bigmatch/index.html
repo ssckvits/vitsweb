@@ -7,13 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 
-    <title>36th Battle of Babes - ODI Match</title>
+    <title>36th Battle of Babes - One Day Encounter</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/nexnova/load1.css">
+    <link rel="stylesheet" href="/nexnova/footer.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -219,6 +223,33 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
     <script src="script.js"></script>
     <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+
+    <footer id="footer">
+        <div class="or" id="ordiv">
+            <hr class="line no-right">
+            <span class="ftr-title">&#9675; VITS &#9675;</span>
+            <hr class="line no-left">
+        </div>
+        <div class="footer-ctn">
+            <div class="rights">
+                <span>&#169; 2024 VITS &nbsp;|&nbsp; All Rights Reserved &nbsp;|&nbsp; St. Sylvester's College
+                    Kandy</span>
+            </div>
+            <div class="social">
+                <i class='bx bxl-facebook' onclick="facebook()"><span>Facebook</span></i>
+                <i class='bx bxl-instagram' onclick="instagram()"><span>Instagram</span></i>
+                <i class='bx bxl-youtube' onclick="youtube()"><span>Youtube</span></i>
+                <i class='bx bx-globe' onclick="vits()"><span>vits.lk</span></i>
+            </div>
+            <div class="other">
+                <i onclick="about()">ABOUT</i>
+                <i onclick="contact()">CONTACT</i>
+                <!-- <i onclick="window.location.href=''">RESOURCES</i> -->
+                <!-- <i onclick="window.location.href=''">TERMS OF SERVICE</i> -->
+                <i onclick="window.location.href='stsylvesterscollege.lk'" id="schlweb">Shool Website</i>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
